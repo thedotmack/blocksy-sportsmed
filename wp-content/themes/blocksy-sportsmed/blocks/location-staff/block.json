@@ -1,0 +1,13 @@
+{
+    "name": "acf/location-staff",
+    "title": "Location Staff",
+    "description": "A custom location staff block.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["location", "staff"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "location-staff.php"
+    },
+    "align": "full"
+}

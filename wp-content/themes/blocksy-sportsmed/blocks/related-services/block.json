@@ -1,0 +1,13 @@
+{
+    "name": "acf/related-services",
+    "title": "Related Services",
+    "description": "A custom related services block.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["related", "services"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "related-services.php"
+    },
+    "align": "full"
+}

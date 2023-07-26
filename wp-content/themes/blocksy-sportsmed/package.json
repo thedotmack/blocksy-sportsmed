@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "npx tailwindcss -i ./tailwind.css -o ./dist/tailwind.min.css --watch",
+    "build": "npx tailwindcss -i ./tailwind.css -o ./dist/tailwind.min.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "tailwindcss": "^3.2.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.28.3"
+  }
+}

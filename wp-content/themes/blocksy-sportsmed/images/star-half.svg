@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="45.7664064px" viewBox="0 0 24 45.7664064" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>star-half</title>
+    <defs>
+        <linearGradient x1="40.0253339%" y1="4.48484557%" x2="59.3763346%" y2="103.211712%" id="linearGradient-1">
+            <stop stop-color="#FFDA1C" offset="0%"></stop>
+            <stop stop-color="#FEB705" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M23.9998583,6.8867773e-08 L24,37.802 L10.4662267,45.6080656 C9.59518713,46.1097844 8.54180998,45.344431 8.74969809,44.360737 L11.9911265,29.0757353 L0.38539578,18.6174539 C-0.361375448,17.9450114 0.0416255104,16.7058125 1.04041751,16.6001263 L16.57744,14.9590879 L22.9395128,0.687976128 C23.1439167,0.22922864 23.5718875,-0.000145104388 23.9998583,6.88677731e-08 Z" id="star-half" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+    </g>
+</svg>
