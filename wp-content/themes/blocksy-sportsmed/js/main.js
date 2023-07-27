@@ -88,15 +88,25 @@ jQuery(document).ready(function ($) {
     },
   });
   
+
+
+
+
   if ($('.gf-page-numbers-container').length) {
-    // Create a new <div> element and store it in a variable
-    var newDiv = $('<div></div>').addClass('gform_wrapper gravity-theme');
-    // Append the new <div> element to the element with class 'gf-page-numbers-container'
-    $('.gf-page-numbers-container').append(newDiv);
-    // Move the contents of '.gf_page_steps' inside the newly added <div>
-    newDiv.append($('.gf_page_steps'));
+    // Add classes 'gform_wrapper' and 'gravity-theme' to the page numbers container
+    $('.gf-page-numbers-container').addClass('gform_wrapper gravity-theme');
+
+    // Find the 'stk-block-content' inside the 'gf-page-numbers-container'
+    var stkBlockContent = $('.gf-page-numbers-container').find('.stk-block-content');
+
+    // Move the contents of '.gf_page_steps' inside the 'stk-block-content'
+    $('.gf_page_steps').appendTo(stkBlockContent);
   }
 
+
+
+
+  
   /* $(document).on('DOMNodeInserted', '.sl-ddl-state', function() {
     $(document).off('DOMNodeInserted','.sl-ddl-state');
     // insert this in to .Filter_section div

@@ -537,4 +537,36 @@ body.page-id-24695 .tw_card-footer {
 }
 
 
+#gform_wrapper_3 .gf_page_steps {
+  display: none;
+}
 
+.gform_wrapper.gravity-theme .gf_page_steps {
+  @apply border-b-0 text-[#6b7dc5] text-right;
+}
+
+.gform_wrapper.gravity-theme .gf_step {
+  margin: 12px 28px 0 15px;
+}
+
+.gform_wrapper.gravity-theme .gf_step_number {
+  @apply text-[#6b7dc5] border-[#6b7dc5] border-2 font-bold;
+}
+
+.gform_wrapper.gravity-theme .gf_step_label {
+  @apply font-bold;
+}
+.gform_wrapper.gravity-theme .gf_step.gf_step_active {
+  @apply text-blue-200;
+}
+
+.gform_wrapper.gravity-theme .gf_step_active .gf_step_number {
+  @apply bg-blue-200 text-[#0a3177] border-none;
+}
+
+.gform_wrapper.gravity-theme .gf_step_completed .gf_step_number:before {
+  @apply bg-[#0a3177] border-[#6b7dc5];
+}
+.gform_wrapper.gravity-theme .gf_step_completed .gf_step_number:after {
+  @apply text-[#6b7dc5];
+}
