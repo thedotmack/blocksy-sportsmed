@@ -88,8 +88,14 @@ jQuery(document).ready(function ($) {
     },
   });
   
-
-
+  if ($('.gf-page-numbers-container').length) {
+    // Create a new <div> element and store it in a variable
+    var newDiv = $('<div></div>').addClass('gform_wrapper gravity-theme');
+    // Append the new <div> element to the element with class 'gf-page-numbers-container'
+    $('.gf-page-numbers-container').append(newDiv);
+    // Move the contents of '.gf_page_steps' inside the newly added <div>
+    newDiv.append($('.gf_page_steps'));
+  }
 
   /* $(document).on('DOMNodeInserted', '.sl-ddl-state', function() {
     $(document).off('DOMNodeInserted','.sl-ddl-state');
