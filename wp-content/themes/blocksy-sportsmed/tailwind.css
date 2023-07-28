@@ -411,6 +411,11 @@ input[type="checkbox"].gfield-choice-input {
   @apply text-[9vw] mb-0 pb-0 md:text-5xl tracking-tight pt-2 md:pt-4 md:pb-0 ml-2 !mt-0 text-center;
 }
 
+#gform_wrapper_4 .gform_wrapper.gravity-theme .gsection_title {
+  @apply text-[9vw] mb-0 pb-0 md:text-4xl tracking-tight pt-2 md:pt-4 md:pb-0 ml-2 !mt-0 text-center;
+}
+
+
 .gform_wrapper.gravity-theme .gsection_description {
   @apply mb-1 md:mb-4 !text-lg leading-6 ml-2 text-center;
 }
