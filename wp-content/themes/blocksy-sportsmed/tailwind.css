@@ -272,7 +272,7 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
 
 .gform_wrapper.gravity-theme .gform_footer, .gform_wrapper.gravity-theme .gform_page_footer{ 
   --buttonFontSize: 24px;
-  @apply !mt-6 pb-0;
+  @apply !mt-6 pb-0 justify-around;
 
 }  
 
