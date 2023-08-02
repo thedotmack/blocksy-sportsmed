@@ -26,6 +26,7 @@ sitemap.xml
 sitemap.xml.gz
 readme.html
 license.txt
+local-xdebuginfo.php
 /index.php
 .idea/
 r.php

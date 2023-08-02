@@ -48,3 +48,29 @@ add_action('enqueue_block_editor_assets', 'load_my_gutenberg_assets');
 
 
 include_once('inc/sync-wpseo-locations-to-asl/wpseo-to-asl-syncer-v5.php');
+
+
+
+function get_wpseo_locations_count() {
+  $post_type = 'wpseo_locations';
+
+  $args = array(
+      'post_type' => $post_type,
+      'post_status' => 'publish',
+      'posts_per_page' => -1,
+  );
+
+  $query = new WP_Query($args);
+
+  if ($query->have_posts()) {
+      return $query->found_posts;
+  }
+
+  return 0;
+}
+
+// Step 3: Create the shortcode
+function wpseo_locations_count_shortcode() {
+  return get_wpseo_locations_count();
+}
+add_shortcode('total_locations', 'wpseo_locations_count_shortcode');
