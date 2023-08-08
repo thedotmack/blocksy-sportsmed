@@ -604,3 +604,28 @@ body.page-id-24695 .tw_card-footer {
 .gform_wrapper.gravity-theme .gf_step_completed .gf_step_number:after {
   @apply text-[#6b7dc5];
 }
+
+
+.asl-search .asl-search-cont {
+  @apply !p-0 !bg-transparent;
+}
+
+.asl-cont.asl-search {
+  font-family: inherit !important;
+}
+
+.asl-cont.asl-search .btn-primary {
+  background-color: #1470ef !important;
+  font-weight: 500 !important;
+  font-size: 18px;
+  @apply !rounded-tr-md !rounded-br-md;
+}
+
+.asl-search .asl-search-cntrl {
+  font-size: 18px !important;
+  @apply !rounded-tl-md !rounded-bl-md;
+}
+
+#asl-storelocator.asl-cont .asl-wrapper .Filter_section .search_filter .sl-search-group .asl-search-clr {
+  @apply !bg-transparent;
+}
