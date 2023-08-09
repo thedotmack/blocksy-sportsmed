@@ -629,3 +629,13 @@ body.page-id-24695 .tw_card-footer {
 #asl-storelocator.asl-cont .asl-wrapper .Filter_section .search_filter .sl-search-group .asl-search-clr {
   @apply !bg-transparent;
 }
+
+
+#gform_wrapper_2.gform-theme--framework .gfield_list_group_item:before, .gform-theme--framework .gform-field-label, .gform-theme--framework .field_description_above .gfield_description:where([class=gfield_description],.gfield_creditcard_warning_message), .gform-theme--framework .field_description_above .gfield_description:where(:not([class=gfield_description]):not(.ginput_counter_tinymce):not(.gfield_creditcard_warning_message):not(.gfield_consent_description)) {
+  @apply !text-white;
+}
+
+#gform_wrapper_2.gform-theme--framework .gform-field-label>.gfield_required {
+  @apply !text-yellow-400;
+}
+
