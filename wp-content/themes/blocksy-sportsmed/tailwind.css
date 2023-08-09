@@ -639,3 +639,11 @@ body.page-id-24695 .tw_card-footer {
   @apply !text-yellow-400;
 }
 
+
+#resumator-jobs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.resumator-job {
+  width: 50%;
+}
