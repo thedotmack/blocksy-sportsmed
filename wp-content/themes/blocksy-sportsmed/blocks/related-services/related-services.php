@@ -92,4 +92,3 @@ if (get_post_type() == 'service') {
 
   </div>
 </div>
-
