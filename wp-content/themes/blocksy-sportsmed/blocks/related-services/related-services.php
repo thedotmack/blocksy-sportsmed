@@ -90,7 +90,6 @@ if (get_post_type() == 'service') {
       <?php endforeach; ?>
     </ul>
 
-
   </div>
-
 </div>
+
