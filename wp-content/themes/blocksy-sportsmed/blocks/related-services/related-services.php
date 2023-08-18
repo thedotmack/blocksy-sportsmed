@@ -40,9 +40,14 @@ if (get_post_type() == 'service') {
   <div class="wp-block-stackable-icon-list stk-block-icon-list stk-block stk-<?php echo esc_attr($class_name); ?>" data-block-id="<?php echo esc_attr($class_name); ?>">
     <style>
       .stk-<?php echo esc_attr($class_name); ?> {
-        column-count: 2 !important;
-        column-gap: 20px !important;
+        column-count: 1 !important;
+        column-gap: 20px;
+      }
 
+      @media screen and (min-width: 767px) {
+        .stk-<?php echo esc_attr($class_name); ?> {
+          column-count: 2 !important;
+        }
       }
 
       .stk-<?php echo esc_attr($class_name); ?> li {
@@ -75,11 +80,6 @@ if (get_post_type() == 'service') {
         font-size: 2em !important
       }
 
-      @media screen and (max-width:1023px) {
-        .stk-<?php echo esc_attr($class_name); ?> {
-          column-count: 2 !important
-        }
-      }
     </style>
 
 
