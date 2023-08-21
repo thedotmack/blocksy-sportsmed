@@ -348,7 +348,7 @@ a[href^="tel:"]:not(.map-phone) {
 
 .gform_wrapper.gravity-theme .ginput_complex label,
 .gform_wrapper.gravity-theme .ginput_complex legend {
-  @apply !text-gray-500 !lowercase !text-sm;
+  @apply !text-gray-500 !text-sm;
 }
 
 .gform_wrapper.gravity-theme .gfield {
