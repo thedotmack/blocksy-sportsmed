@@ -25,6 +25,7 @@ function register_acf_blocks()
   register_block_type(__DIR__ . '/blocks/location-staff');
   register_block_type(__DIR__ . '/blocks/acf-gallery-carousel');
   register_block_type(__DIR__ . '/blocks/service-locations');
+  register_block_type(__DIR__ . '/blocks/service-locations-map');
 }
 
 
