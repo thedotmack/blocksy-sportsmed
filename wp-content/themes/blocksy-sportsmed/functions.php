@@ -24,6 +24,7 @@ function register_acf_blocks()
   register_block_type(__DIR__ . '/blocks/related-services');
   register_block_type(__DIR__ . '/blocks/location-staff');
   register_block_type(__DIR__ . '/blocks/acf-gallery-carousel');
+  register_block_type(__DIR__ . '/blocks/service-locations');
 }
 
 
@@ -74,3 +75,7 @@ function wpseo_locations_count_shortcode() {
   return get_wpseo_locations_count();
 }
 add_shortcode('total_locations', 'wpseo_locations_count_shortcode');
+
+
+
+

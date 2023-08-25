@@ -1,0 +1,13 @@
+{
+    "name": "acf/service-locations-map",
+    "title": "Service Locations Map",
+    "description": "A custom block showing a locations map that provide the related service.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["service", "locations", "map"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "service-locations-map.php"
+    },
+    "align": "full"
+}

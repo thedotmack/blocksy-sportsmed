@@ -1,0 +1,13 @@
+{
+    "name": "acf/service-locations",
+    "title": "Service Locations Cards",
+    "description": "A custom block showing location cards that provide the related service.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["service", "locations","cards"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "service-locations.php"
+    },
+    "align": "full"
+}
