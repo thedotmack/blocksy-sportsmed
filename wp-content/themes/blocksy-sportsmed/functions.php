@@ -86,3 +86,8 @@ function wpb_custom_image_sizes( $size_names ) {
     return array_merge( $size_names, $new_sizes );
 }
 add_filter( 'image_size_names_choose', 'wpb_custom_image_sizes' );
+
+
+add_action('wp_footer',function() {
+  echo '<script>pivot({ selector: ".shiny-card", shiny: true });</script>';
+},10);
