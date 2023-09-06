@@ -13,7 +13,8 @@ add_action('wp_enqueue_scripts', function () {
   } else {
     wp_enqueue_style('blocksy-child-style', get_stylesheet_directory_uri() . '/dist/tailwind.min.css');
   }
-  wp_enqueue_script('child-main-js', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), '1.0.3', false);
+  wp_enqueue_script('pivot-js', get_stylesheet_directory_uri() . '/js/pivot.js', array('jquery'), '1.0.5', false);
+  wp_enqueue_script('child-main-js', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), '1.0.5', false);
 }, 100);
 
 
@@ -50,8 +51,6 @@ add_action('enqueue_block_editor_assets', 'load_my_gutenberg_assets');
 
 
 include_once('inc/sync-wpseo-locations-to-asl/wpseo-to-asl-syncer-v5.php');
-
-
 
 function get_wpseo_locations_count() {
   $post_type = 'wpseo_locations';
