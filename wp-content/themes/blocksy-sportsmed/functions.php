@@ -13,7 +13,6 @@ add_action('wp_enqueue_scripts', function () {
   } else {
     wp_enqueue_style('blocksy-child-style', get_stylesheet_directory_uri() . '/dist/tailwind.min.css');
   }
-  wp_enqueue_script('pivot-js', get_stylesheet_directory_uri() . '/js/pivot.js', array('jquery'), '1.0.5', false);
   wp_enqueue_script('child-main-js', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), '1.0.5', false);
 }, 100);
 
@@ -88,6 +87,3 @@ function wpb_custom_image_sizes( $size_names ) {
 add_filter( 'image_size_names_choose', 'wpb_custom_image_sizes' );
 
 
-add_action('wp_footer',function() {
-  echo "<script>pivot.init({selector: '.shiny-card .stk-img-wrapper', position: { method: 'absolute', zindex: 5 }, shine: true });</script>";
-},10);
