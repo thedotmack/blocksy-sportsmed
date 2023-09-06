@@ -89,5 +89,5 @@ add_filter( 'image_size_names_choose', 'wpb_custom_image_sizes' );
 
 
 add_action('wp_footer',function() {
-  echo "<script>pivot.init({selector: '.shiny-card .stk-img-wrapper', shadow: true, shine: true });</script>";
+  echo "<script>pivot.init({selector: '.shiny-card .stk-img-wrapper', position: { method: 'absolute', zindex: 5 }, shadow: true, shine: true });</script>";
 },10);
