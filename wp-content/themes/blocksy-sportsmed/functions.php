@@ -80,3 +80,10 @@ add_shortcode('total_locations', 'wpseo_locations_count_shortcode');
 
 
 
+function wpb_custom_image_sizes( $size_names ) {
+    $new_sizes = array(
+        'staff_portrait' => 'Staff Portrait', 
+    );
+    return array_merge( $size_names, $new_sizes );
+}
+add_filter( 'image_size_names_choose', 'wpb_custom_image_sizes' );

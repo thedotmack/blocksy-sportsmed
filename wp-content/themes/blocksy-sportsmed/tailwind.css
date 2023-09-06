@@ -129,7 +129,20 @@
 body.home #asl-storelocator.asl-p-cont #asl-map-canv,
 body.home #asl-storelocator.asl-cont #asl-map-canv {
   height: 72vh !important;
-  }
+}
+
+.map-column-1 {
+  @apply p-5 overflow-scroll h-[calc(100vh-72px)] w-[33%];
+}
+
+.map-column-2 {
+  @apply w-[67%] h-[calc(100vh-72px)];
+}
+
+.map-column-2 #asl-map-canv {
+  @apply w-full h-[calc(100vh-72px)];
+}
+
 
 :is(.stk-block-button,.stk-block-icon-button,.stk-block-pagination,.stk-block-load-more,.stk-block-posts):not(.is-style-link) .stk-button {
   @apply justify-between;
