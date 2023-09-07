@@ -660,3 +660,13 @@ body.page-id-24695 .tw_card-footer {
 .resumator-job {
   width: 50%;
 }
+
+
+.kb-splide .splide__arrow--prev {
+  @apply !-left-8 lg:!-left-10 xl:!-left-14;
+}
+
+.kb-splide .splide__arrow--next {
+  @apply !-right-8 lg:!-right-10 xl:!-right-14;
+}
+  
