@@ -132,11 +132,11 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
 }
 
 .map-column-1 {
-  @apply p-5 overflow-scroll h-[calc(100vh-72px)] w-[33%];
+  @apply overflow-scroll h-[calc(100vh-72px)] w-5/12;
 }
 
 .map-column-2 {
-  @apply w-[67%] h-[calc(100vh-72px)];
+  @apply w-7/12 h-[calc(100vh-72px)];
 }
 
 .map-column-2 #asl-map-canv {
@@ -153,7 +153,7 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
 }
 
 #asl-storelocator.asl-cont.asl-template-0 .asl-wrapper .Filter_section {
-  background-color: transparent !important;
+  background: transparent;
 }
 
 
@@ -239,6 +239,7 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
 }
 
 #asl-storelocator.asl-cont .asl-wrapper .Filter_section .search_filter {
+  @apply mt-2;
   padding-left: 0 !important; 
   padding-right: 0 !important;
 }
@@ -256,7 +257,19 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
 
 
 
+#asl-storelocator.asl-cont.asl-template-0 .asl-wrapper .asl-advance-filters {
+  @apply space-x-2 py-2;
+}
 
+
+#asl-storelocator.asl-cont.asl-template-0 .asl-wrapper .Filter_section .search_filter .sl-search-group .asl-search-address, #asl-storelocator.asl-cont.asl-template-0 .asl-wrapper .Filter_section .search_filter .sl-search-group .asl-search-name {
+  @apply text-xl !h-auto py-2.5 px-3;
+}
+
+#asl-storelocator.asl-cont.asl-template-0 .asl-wrapper .Filter_section .search_filter .sl-search-group .asl-search-address::placeholder, #asl-storelocator.asl-cont.asl-template-0 .asl-wrapper .Filter_section .search_filter .sl-search-group .asl-search-name::placeholder {
+  font-size: inherit;
+  @apply text-slate-400 italic;
+}
 
 
 
@@ -517,7 +530,11 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .tw_card-container {
-    @apply p-4 mb-5 flex-col rounded-lg border border-gray-200 border-solid bg-white overflow-hidden shadow relative;
+    @apply p-4 mb-10 flex-col rounded-lg border border-gray-200 border-solid bg-white overflow-hidden shadow relative hover:shadow-2xl hover:z-10 hover:shadow-slate-500/30 transition-shadow cursor-pointer;
+}
+
+.map-column-1 .tw_card-container {
+  @apply m-10;
 }
 
 .tw_card-container.tw_card-container__infobox {
@@ -526,7 +543,7 @@ input[type="checkbox"].gfield-choice-input {
 
 
 .tw_card-image {
-    @apply relative z-10 w-40 h-28 object-cover rounded-lg border-solid border border-gray-200 p-0.5 bg-white overflow-hidden shadow-sm;
+    @apply relative z-10 w-1/2 h-[12vw] mb-5 object-cover rounded-lg border-solid border border-gray-200 p-0.5 bg-white overflow-hidden shadow-sm;
 }
 
 .tw_card-container__infobox .tw_card-image {

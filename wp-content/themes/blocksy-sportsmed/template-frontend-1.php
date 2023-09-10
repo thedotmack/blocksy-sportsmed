@@ -75,44 +75,62 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
   }
 </style>
 
-<div id="asl-storelocator" class="absolute inset-0 h-[calc(100vh-72px)] w-[100vw] overflow-hidden storelocator-main asl-cont asl-template-0 asl-layout-1 asl-bg-3 full-width asl-text-2">
+<div id="asl-storelocator" class="absolute m-0 p-0 inset-0 h-[calc(100vh-72px)] w-[100vw] overflow-hidden storelocator-main asl-cont asl-template-0 asl-layout-1 asl-bg-3 full-width asl-text-2">
+
   <div class="asl-wrapper flex">
 
-    <div class="map-column-1">
+    <div class="map-column-1 relative">
+
       <?php if ($all_configs['advance_filter']) : ?>
-        <div class="Filter_section">
-          <div class="search_filter">
+        <div class="Filter_section !bg-white sticky top-0 left-0 right-0 z-20 shadow-md !pt-5">
 
-            <div class="mb-2 font-semibold !text-sm"><?php echo asl_esc_lbl('search_loc') ?></div>
+          <img class="absolute z-30 opacity-50 inset-0 object-cover object-top w-full h-full" src="https://spineandsportsmed.local/wp-content/uploads/2023/07/bg-sportsman@2x.jpg">
 
-            <div class="sl-search-group d-flex">
+          <div class="search_filter relative z-40 !mx-8">
+            <style>
+              :root {
+                --animate-delay: 0.25s;
+              }
+            </style>
+
+            <h1 class="!text-5xl !font-bold mb-3 text-blue-900 animate__animated animate__fadeIn animate__delay-1s"><?php echo asl_esc_lbl('search_loc') ?></h1>
+
+            <p class="!text-base mb-3 animate__animated animate__fadeIn animate__delay-2s"><strong class="text-blue-700">Let&rsquo;s start by finding the closest SportsMed to you.</strong> <small></small>You can search by address, zip code, state, or county. Same day or next day appointments are available by request.</p>
+
+            <div class="sl-search-group d-flex animate__animated animate__fadeIn animate__delay-3s">
               <input type="text" value="<?php echo $default_addr ?>" data-submit="disable" tabindex="2" id="auto-complete-search" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>" class="<?php echo $search_type_class ?> form-control isp_ignore">
               <button type="button" class="span-geo"><i class="<?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
             </div>
 
-            <div class="asl-advance-filters">
-              <div class="<?php echo $ddl_class_grid ?> <?php echo $ddl_class ?> asl-ddl-filters">
+            <div class="asl-advance-filters flex animate__animated animate__fadeIn animate__delay-4s">
+
+              <div class="asl-ddl-filters w-1/2">
                 <div class="asl-filter-cntrl">
-                  <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[0]) ?></label>
+                  <!-- <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[0]) ?></label> -->
                   <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[0] ?>_filter">
                   </div>
                 </div>
               </div>
 
-              <div class="<?php echo $ddl_class_grid ?> <?php echo $ddl_class ?> asl-ddl-filters">
+              <div class="asl-ddl-filters w-1/2">
                 <div class="asl-filter-cntrl">
-                  <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[1]) ?></label>
+                  <!-- <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[1]) ?></label> -->
                   <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[1] ?>_filter">
                   </div>
                 </div>
               </div>
+
+
             </div>
+
+
 
           </div>
         </div>
       <?php endif; ?>
 
       <div id="asl-panel" class="asl-panel asl_locator-panel">
+
         <!-- OVERLAY -->
         <div class="asl-overlay" id="map-loading">
           <div class="white"></div>
@@ -124,7 +142,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
         <!-- LIST -->
         <div class="asl-panel-inner">
-          <div class="top-title Num_of_store">
+          <div class="top-title Num_of_store hidden">
             <span><span class="sl-head-title"><?php echo $all_configs['head_title'] ?></span>: <span class="count-result">0</span></span>
             <?php if ($all_configs['branches'] == '1') : ?>
               <a title="<?php echo asl_esc_lbl('bck_to_list') ?>" class="sl-hide-branches d-none"><i class="icon-back mr-1"></i><?php echo asl_esc_lbl('bck_to_list') ?></a>
@@ -154,7 +172,6 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
   </div>
 </div>
-
 
 
 
@@ -202,8 +219,8 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
   </div>
 
   <div class="tw_card-footer">
-    <a class="tw_btn-primary" href="/get-started-now/location/?title={{:title}}">Make Appointment</a>
-    <a class="tw_btn-secondary" href="{{:link}}">Learn More &rarr;</a>
+    <a class="tw_btn-secondary" href="{{:link}}">Learn More</a>
+    <a class="tw_btn-primary" href="/get-started-now/location/?title={{:title}}">Make An Appointment</a>
   </div>
 
 </div>
@@ -213,7 +230,8 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 <!-- <div class="backdrop-blur-sm"> -->
 
 <script id="asl_too_tip" type="text/x-jsrender">
-  <div class="tw_card-container tw_card-container__infobox" data-id="{{:id}}">
+
+<div class="tw_card-container tw_card-container__infobox" data-id="{{:id}}">
 
 <div class="tw_card-content">
 
@@ -255,6 +273,8 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 </script>
 
 
+<!-- <div class="text-3xl"></div> -->
+
 
 <script type="text/javascript">
   document.addEventListener('readystatechange', function() {
@@ -263,4 +283,15 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
     window['asl_tmpls'] = {};
     window['asl_tmpls']['infobox'] = '#asl_too_tip';
   });
+</script>
+
+<!-- <div class="border-blue-600 border-2 !border-blue-600 !border-2"></div> -->
+
+<script type="text/javascript">
+function asl_event_hook(_event) {
+  if(_event.type == 'select') {
+    jQuery(".tw_card-container").removeClass('!border-2 !border-blue-600');
+    jQuery(".tw_card-container[data-id='" + _event.data.id + "']").addClass('!border-blue-600 !border-2');
+  }
+}
 </script>

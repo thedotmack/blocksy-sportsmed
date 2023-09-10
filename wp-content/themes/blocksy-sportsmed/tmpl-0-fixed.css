@@ -6879,8 +6879,6 @@ $gray_color2: #666666;
   .Filter_section
   .search_filter
   p {
-  color: #b97077;
-  color: var(--sl-primary, #b97077);
 }
 #asl-storelocator.asl-cont.asl-template-0
   .asl-wrapper
