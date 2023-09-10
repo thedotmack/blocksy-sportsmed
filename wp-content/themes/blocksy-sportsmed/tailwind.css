@@ -131,18 +131,19 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
   height: 72vh !important;
 }
 
+
+
 .map-column-1 {
-  @apply overflow-scroll h-[calc(100vh-72px)] w-5/12;
+  @apply overflow-scroll w-full absolute h-[calc(80vh-72px)] top-[20vh] lg:top-0 lg:relative lg:h-[calc(100vh-72px)] lg:w-5/12;
 }
 
 .map-column-2 {
-  @apply w-7/12 h-[calc(100vh-72px)];
+  @apply w-full h-[20vh] absolute top-0 lg:relative lg:h-[calc(100vh-72px)] lg:w-7/12;
 }
 
 .map-column-2 #asl-map-canv {
-  @apply w-full h-[calc(100vh-72px)];
+  @apply w-full h-full;
 }
-
 
 :is(.stk-block-button,.stk-block-icon-button,.stk-block-pagination,.stk-block-load-more,.stk-block-posts):not(.is-style-link) .stk-button {
   @apply justify-between;
@@ -258,7 +259,7 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
 
 
 #asl-storelocator.asl-cont.asl-template-0 .asl-wrapper .asl-advance-filters {
-  @apply space-x-2 py-2;
+  @apply space-x-2 pt-2;
 }
 
 

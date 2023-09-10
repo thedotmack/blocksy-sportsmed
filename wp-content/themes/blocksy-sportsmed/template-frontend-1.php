@@ -77,7 +77,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
 <div id="asl-storelocator" class="absolute m-0 p-0 inset-0 h-[calc(100vh-72px)] w-[100vw] overflow-hidden storelocator-main asl-cont asl-template-0 asl-layout-1 asl-bg-3 full-width asl-text-2">
 
-  <div class="asl-wrapper flex">
+  <div class="asl-wrapper lg:flex">
 
     <div class="map-column-1 relative">
 
@@ -86,14 +86,14 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
           <img class="absolute z-30 opacity-50 inset-0 object-cover object-top w-full h-full" src="https://spineandsportsmed.local/wp-content/uploads/2023/07/bg-sportsman@2x.jpg">
 
-          <div class="search_filter relative z-40 !mx-8">
+          <div class="search_filter relative z-40 !mx-4 lg:!mx-8">
             <style>
               :root {
                 --animate-delay: 0.25s;
               }
             </style>
 
-            <h1 class="!text-5xl !font-bold mb-3 text-blue-900 animate__animated animate__fadeIn animate__delay-1s"><?php echo asl_esc_lbl('search_loc') ?></h1>
+            <h1 class="!text-2xl lg:!text-5xl !font-bold mb-2 lg:mb-3 text-blue-900 animate__animated animate__fadeIn animate__delay-1s"><?php echo asl_esc_lbl('search_loc') ?></h1>
 
             <p class="!text-base mb-3 animate__animated animate__fadeIn animate__delay-2s"><strong class="text-blue-700">Let&rsquo;s start by finding the closest SportsMed to you.</strong> <small></small>You can search by address, zip code, state, or county. Same day or next day appointments are available by request.</p>
 
@@ -164,10 +164,8 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
     <div class="map-column-2">
       <!-- MAP -->
-
       <div id="asl-map-canv" class="asl-map-canv"></div>
       <?php include ASL_PLUGIN_PATH . 'public/partials/_agile_modal.php'; ?>
-
     </div>
 
   </div>

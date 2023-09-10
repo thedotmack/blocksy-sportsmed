@@ -2432,7 +2432,7 @@ $gray_color2: #666666;
   display: block !important;
 }
 #asl-storelocator.asl-cont .asl-wrapper .asl-ddl-filters {
-  margin-bottom: 15px !important;
+  /* margin-bottom: 15px !important; */
 }
 #asl-storelocator.asl-cont
   .asl-wrapper
@@ -5999,7 +5999,7 @@ $gray_color2: #666666;
     .Filter_section
     .asl-advance-filters
     .asl-filter-cntrl {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   #asl-storelocator.asl-cont
     .asl-wrapper
@@ -6047,7 +6047,7 @@ $gray_color2: #666666;
     .Filter_section
     .search_filter
     .sl-search-group {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
   }
   #asl-storelocator.asl-cont
     .asl-wrapper
