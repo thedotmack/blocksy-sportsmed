@@ -95,14 +95,14 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
             <h1 class="!text-2xl lg:!text-5xl !font-bold mb-2 lg:mb-3 text-blue-900 animate__animated animate__fadeIn animate__delay-1s"><?php echo asl_esc_lbl('search_loc') ?></h1>
 
-            <p class="!text-base mb-3 animate__animated animate__fadeIn animate__delay-2s"><strong class="text-blue-700">Let&rsquo;s start by finding the closest SportsMed to you.</strong> <small></small>You can search by address, zip code, state, or county. Same day or next day appointments are available by request.</p>
+            <p class="!text-base mb-3 animate__animated animate__fadeIn animate__delay-2s"><strong class="text-blue-700">Let&rsquo;s start by finding the closest SportsMed to you.</strong> <small></small> <span class="hidden lg:inline">You can search by address, zip code, state, or county. Same day or next day appointments are available by request.</span></p>
 
             <div class="sl-search-group d-flex animate__animated animate__fadeIn animate__delay-3s">
               <input type="text" value="<?php echo $default_addr ?>" data-submit="disable" tabindex="2" id="auto-complete-search" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>" class="<?php echo $search_type_class ?> form-control isp_ignore">
               <button type="button" class="span-geo"><i class="<?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
             </div>
 
-            <div class="asl-advance-filters flex animate__animated animate__fadeIn animate__delay-4s">
+            <div class="asl-advance-filters animate__animated animate__fadeIn animate__delay-4s hidden lg:flex">
 
               <div class="asl-ddl-filters w-1/2">
                 <div class="asl-filter-cntrl">
