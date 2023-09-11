@@ -75,35 +75,46 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
   }
 </style>
 
-<div id="asl-storelocator" class="absolute m-0 p-0 inset-0 h-[calc(100vh-72px)] w-[100vw] overflow-hidden storelocator-main asl-cont asl-template-0 asl-layout-1 asl-bg-3 full-width asl-text-2">
+<div id="asl-storelocator" class="storelocator-main asl-cont asl-template-0 asl-template-1 asl-layout-1 asl-bg-3 full-width asl-text-2">
 
-  <div class="asl-wrapper lg:flex">
+  <div class="asl-wrapper flex lg:flex-row">
 
     <div class="map-column-1 relative">
 
       <?php if ($all_configs['advance_filter']) : ?>
-        <div class="Filter_section !bg-white sticky top-0 left-0 right-0 z-20 shadow-md !pt-5">
+        <div class="Filter_section">
 
-          <img class="absolute z-30 opacity-50 inset-0 object-cover object-top w-full h-full" src="https://spineandsportsmed.local/wp-content/uploads/2023/07/bg-sportsman@2x.jpg">
+          <img class="absolute z-0 inset-0 ml-5 object-contain object-left w-full h-full animate__animated animate__fadeIn animate__delay-4s" src="https://spineandsportsmed.local/wp-content/uploads/2023/07/bg-sportsman@2x.jpg">
 
-          <div class="search_filter relative z-40 !mx-4 lg:!mx-8">
+          <div class="search_filter">
             <style>
               :root {
                 --animate-delay: 0.25s;
               }
             </style>
 
-            <h1 class="!text-2xl lg:!text-5xl !font-bold mb-2 lg:mb-3 text-blue-900 animate__animated animate__fadeIn animate__delay-1s"><?php echo asl_esc_lbl('search_loc') ?></h1>
+            <h1 class="search_filter__title animate__animated animate__fadeIn animate__delay-1s"><?php echo asl_esc_lbl('search_loc') ?></h1>
 
-            <p class="!text-base mb-3 animate__animated animate__fadeIn animate__delay-2s"><strong class="text-blue-700">Let&rsquo;s start by finding the closest SportsMed to you.</strong> <small></small> <span class="hidden lg:inline">You can search by address, zip code, state, or county. Same day or next day appointments are available by request.</span></p>
+            <p class="!text-base !text-slate-500 mb-3 animate__animated animate__fadeIn animate__delay-2s hidden lg:block"><strong class="text-[--custom-color-primary-blue]">Let&rsquo;s start by finding the closest SportsMed to you.</strong> You can search by address, zip code, state, or county. Same day or next day appointments are available by request.</p>
 
-            <div class="sl-search-group d-flex animate__animated animate__fadeIn animate__delay-3s">
-              <input type="text" value="<?php echo $default_addr ?>" data-submit="disable" tabindex="2" id="auto-complete-search" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>" class="<?php echo $search_type_class ?> form-control isp_ignore">
-              <button type="button" class="span-geo"><i class="<?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
+            <div class="flex space-x-2 animate__animated animate__fadeIn animate__delay-3s">
+
+              <div class="sl-search-group flex flex-1">
+                <input type="text" value="<?php echo $default_addr ?>" data-submit="disable" tabindex="2" id="auto-complete-search" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>" class="<?php echo $search_type_class ?> form-control isp_ignore">
+                <button type="button" class="span-geo"><i class="<?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
+              </div>
+
+              <div class="sl-form-group range_filter asl-ddl-filters flex-2 hidden">
+                <label><?php echo asl_esc_lbl('in') ?></label>
+                <div class="rangeFilter asl-filter-cntrl">
+                  <input id="asl-radius-slide" type="text" class="span2" />
+                  <span class="rad-unit"><?php echo asl_esc_lbl('radius') ?>: <span id="asl-radius-input"></span><span id="asl-dist-unit"><?php echo asl_esc_lbl('km', 'asl_locator') ?></span></span>
+                </div>
+              </div>
+
             </div>
 
             <div class="asl-advance-filters animate__animated animate__fadeIn animate__delay-4s hidden lg:flex">
-
               <div class="asl-ddl-filters w-1/2">
                 <div class="asl-filter-cntrl">
                   <!-- <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[0]) ?></label> -->
@@ -120,10 +131,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
                 </div>
               </div>
 
-
             </div>
-
-
 
           </div>
         </div>
@@ -170,8 +178,6 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
   </div>
 </div>
-
-
 
 
 
@@ -229,8 +235,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
 <script id="asl_too_tip" type="text/x-jsrender">
 
-<div class="tw_card-container tw_card-container__infobox" data-id="{{:id}}">
-
+  <div class="tw_card-container tw_card-container__infobox tw_card-container__tooltip" data-id="{{:id}}">
 <div class="tw_card-content">
 
   <img class="tw_card-image" src="{{:featured_image_url}}">
@@ -240,11 +245,11 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
       <?php $logomark = wp_get_attachment_image_src(25165, 'full'); ?>
       <img class="tw_card-logo" src="<?= $logomark[0] ?>" alt="SportsMed {{:title}} Logo">
       <div>
-        <div class="tw_card-title text-[--custom-color-title]">{{:title}}</div>
+        <div class="tw_card-title">{{:title}}</div>
         <div class="tw_card-subtitle">{{:str_special}}</div>
       </div>
     </div>
-    <div class="tw_card-info">
+    <div class="tw_card-info pb-0">
       <div>
         {{:street}}<br>
         {{:city}}, {{:state}} {{:postal_code}}
@@ -262,7 +267,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
   </div>
 </div>
 
-<div class="tw_card-footer">
+<div class="tw_card-footer !hidden lg:!block">
   <a class="tw_btn-primary" href="/get-started-now/location/?title={{:title}}">Make Appointment</a>
   <a class="tw_btn-secondary" href="{{:link}}">Learn More &rarr;</a>
 </div>
@@ -286,10 +291,10 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 <!-- <div class="border-blue-600 border-2 !border-blue-600 !border-2"></div> -->
 
 <script type="text/javascript">
-function asl_event_hook(_event) {
-  if(_event.type == 'select') {
-    jQuery(".tw_card-container").removeClass('!border-2 !border-blue-600');
-    jQuery(".tw_card-container[data-id='" + _event.data.id + "']").addClass('!border-blue-600 !border-2');
+  function asl_event_hook(_event) {
+    if (_event.type == 'select') {
+      jQuery(".tw_card-container").removeClass('!border-2 !border-blue-600');
+      jQuery(".tw_card-container[data-id='" + _event.data.id + "']").addClass('!border-blue-600 !border-2');
+    }
   }
-}
 </script>

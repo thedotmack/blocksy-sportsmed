@@ -9,7 +9,7 @@ $ddl_class_grid = ($all_configs['search_2']) ? 'pol-lg-6 pol-md-6 pol-sm-12' : '
 $tsw_class_grid = ($all_configs['search_2']) ? 'pol-lg-2 pol-md-3 pol-sm-12' : 'pol-lg-2 pol-md-3 pol-sm-12';
 $adv_class_grid = ($all_configs['search_2']) ? 'pol-lg-8 pol-md-7' : 'pol-lg-8 pol-md-7';
 
-$ddl_class      = '';
+
 
 
 $class = (isset($all_configs['css_class'])) ? ' ' . $all_configs['css_class'] : '';
@@ -93,23 +93,34 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
         </div>
       <?php endif; ?>
       <?php if ($all_configs['advance_filter']) : ?>
-        <div class="sl-row gutters-40 Filter_section">
-          
+        <div class="sl-row gutters-40 Filter_section mb-4">
+
+
           <div class="pol-lg-4 pol-md-5 pol-sm-12 search_filter">
-              <div class="mb-2 font-semibold !text-sm"><?php echo asl_esc_lbl('search_loc') ?></div>
-              <div class="sl-search-group d-flex">
-                <input type="text" value="<?php echo $default_addr ?>" data-submit="disable"  tabindex="2" id="auto-complete-search" placeholder="<?php echo asl_esc_lbl( 'enter_loc') ?>"  class="<?php echo $search_type_class ?> form-control isp_ignore">
-                <button type="button" class="span-geo"><i class="<?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1')?__('Current Location','asl_locator'):__('Search Location','asl_locator') ?>"></i></button>
-              </div>
+            <div class="mb-2 font-semibold !text-sm"><?php echo asl_esc_lbl('search_loc') ?></div>
+            <div class="sl-search-group d-flex">
+              <input type="text" value="<?php echo $default_addr ?>" data-submit="disable" tabindex="2" id="auto-complete-search" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>" class="<?php echo $search_type_class ?> form-control isp_ignore">
+              <button type="button" class="span-geo"><i class="<?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
+            </div>
           </div>
 
 
           <div class="pol-lg-8 pol-md-7 pol-sm-12">
             <div class="sl-row">
               <div class="pol-sm-12 asl-advance-filters hide">
-                <div class="sl-row">
-                  
-                  <div class="<?php echo $ddl_class_grid ?> <?php echo $ddl_class ?> asl-ddl-filters">
+                <div class="flex space-x-2.5">
+
+
+                  <div class="flex-1 range_filter asl-ddl-filters hidden">
+                    <label><?php echo asl_esc_lbl('in') ?></label>
+                    <div class="rangeFilter asl-filter-cntrl">
+                      <input id="asl-radius-slide" type="text" class="span2" />
+                      <span class="rad-unit"><?php echo asl_esc_lbl('radius') ?>: <span id="asl-radius-input"></span><span id="asl-dist-unit"><?php echo asl_esc_lbl('km', 'asl_locator') ?></span></span>
+                    </div>
+                  </div>
+
+
+                  <div class="asl-ddl-filters flex-1">
                     <div class="asl-filter-cntrl">
                       <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[0]) ?></label>
                       <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[0] ?>_filter">
@@ -117,7 +128,7 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
                     </div>
                   </div>
 
-                  <div class="<?php echo $ddl_class_grid ?> <?php echo $ddl_class ?> asl-ddl-filters">
+                  <div class="asl-ddl-filters flex-1">
                     <div class="asl-filter-cntrl">
                       <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[1]) ?></label>
                       <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[1] ?>_filter">
@@ -137,11 +148,11 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
       <div class="sl-row">
         <div class="pol-12">
           <div class="sl-main-cont">
-            
+
             <div class="sl-row sl-main-row gutters-40">
-              
+
               <div id="asl-panel" class="asl-panel pol-md-5 pol-lg-4 asl_locator-panel">
-                
+
                 <div class="asl-overlay" id="map-loading">
                   <div class="white"></div>
                   <div class="sl-loading">
@@ -236,14 +247,14 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
 
 
 <script>
-// body onload
-jQuery(document).ready(function($) {
-  jQuery('#agile-store-locator-tmpl-0-css, #agile-store-locator-sl-bootstrap-css').remove();
-});
+  // body onload
+  jQuery(document).ready(function($) {
+    jQuery('#agile-store-locator-tmpl-0-css, #agile-store-locator-sl-bootstrap-css').remove();
+  });
 </script>
 
 <script id="tmpl_list_item" type="text/x-jsrender">
-<div class="tw_card-container" data-id="{{:id}}">
+  <div class="tw_card-container" data-id="{{:id}}">
 
   <div class="tw_card-content">
 
@@ -288,7 +299,7 @@ jQuery(document).ready(function($) {
 <!-- <div class="backdrop-blur-sm"> -->
 
 <script id="asl_too_tip" type="text/x-jsrender">
-<div class="tw_card-container tw_card-container__infobox" data-id="{{:id}}">
+  <div class="tw_card-container tw_card-container__infobox" data-id="{{:id}}">
 
 <div class="tw_card-content">
 
@@ -332,12 +343,12 @@ jQuery(document).ready(function($) {
 
 
 <script type="text/javascript">
- document.addEventListener('readystatechange', function() {
-   window['asl_tmpls'] = {};
-   window['asl_tmpls']['list'] = '#tmpl_list_item';
-   window['asl_tmpls'] = {};
-   window['asl_tmpls']['infobox'] = '#asl_too_tip';
- });
+  document.addEventListener('readystatechange', function() {
+    window['asl_tmpls'] = {};
+    window['asl_tmpls']['list'] = '#tmpl_list_item';
+    window['asl_tmpls'] = {};
+    window['asl_tmpls']['infobox'] = '#asl_too_tip';
+  });
 </script>
 
 <!--

@@ -3495,7 +3495,7 @@ $gray_color2: #666666;
   top: inherit;
 }
 #asl-storelocator.asl-cont .asl-wrapper .Filter_section {
-  padding: 30px 0 15px 0;
+  /* padding: 0 0 15px 0; */
 }
 #asl-storelocator.asl-cont
   .asl-wrapper
@@ -6898,8 +6898,7 @@ $gray_color2: #666666;
   .search_filter
   .sl-search-group
   .span-geo {
-  background-color: #b97077;
-  background-color: var(--sl-action-btn-bg, #b97077);
+  background-color: #0883bf;
 }
 #asl-storelocator.asl-cont.asl-template-0
   .asl-wrapper
