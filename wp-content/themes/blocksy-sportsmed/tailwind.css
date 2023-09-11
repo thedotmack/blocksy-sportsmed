@@ -151,22 +151,35 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
   height: 72vh !important;
 }
 
+body.page-id-26145,
+body.page-id-26145 #main,
+body.page-id-26145 #main-container,
+body.page-id-26145 .ct-container-full,
+body.page-id-26145 article.page,
+body.page-id-26145 .entry-content {
+  /* @apply absolute top-0 bottom-0 left-0 right-0 overflow-hidden h-full w-full; */
+}
+
+body.page-id-26145 {
+  @apply fixed overflow-hidden top-0 left-0 right-0 h-[100svh];
+}
+
 #asl-storelocator.asl-template-1 {
   @apply overflow-hidden 
     absolute 
     m-0 
     p-0 
-    inset-0 
-    top-12 
-    h-[100vh] 
-    w-[100vw] 
+    top-12
+    bottom-0
+    h-full
+    w-full
 
     lg:top-[72px];
 }
 
 /* list */
 .map-column-1 {
-  @apply overflow-scroll 
+  @apply overflow-hidden 
     w-full 
     h-full
     absolute
@@ -180,18 +193,18 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
 }
 
 .map-column-1 .asl-panel-inner {
-  @apply pt-[25vh]
-  lg:pt-0;
+  @apply pt-[46vh]
+  lg:pt-[29vh];
 }
 
 /* map */
 .map-column-2 {
   @apply w-full 
-    h-[25vh] 
+    h-[30vh] 
     shadow-lg 
     absolute 
     z-10 
-    top-[12.5vh] 
+    top-[16vh] 
 
     lg:top-0 
     lg:relative 
@@ -212,7 +225,7 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
     z-20 
     shadow-md 
     
-    h-[12.5vh] 
+    h-[16vh] 
     
     lg:pb-5
     lg:pt-5 
@@ -228,7 +241,7 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
     mt-0 
     pt-3
     pl-1
-    !text-3xl 
+    !text-2xl 
     !font-bold 
     mb-2 
     
@@ -306,6 +319,10 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
   .asl-panel-inner
   .Num_of_store {
   display: none !important;
+}
+
+#asl-storelocator.asl-cont .asl-panel {
+  @apply absolute top-0 bottom-0 left-0 right-0 overflow-scroll;
 }
 
 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
@@ -767,8 +784,6 @@ input[type="checkbox"].gfield-choice-input {
 .tw_card-image {
   @apply relative 
     z-10 
-    w-1/2 
-    h-48 
     mb-5 
     object-cover 
     rounded-lg 
@@ -778,7 +793,13 @@ input[type="checkbox"].gfield-choice-input {
     p-0.5 
     bg-white 
     overflow-hidden 
-    shadow-sm;
+    shadow-sm
+    
+    w-1/4
+    h-20
+    
+    lg:w-1/2 
+    lg:h-48;
 }
 
 .tw_card-container__infobox .tw_card-image {
@@ -809,7 +830,7 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .tw_card-info {
-  @apply font-medium text-[17px] py-4 px-3 text-[--custom-color-subtitle];
+  @apply font-medium text-[15px] py-4 px-3 text-[--custom-color-subtitle];
 }
 
 .tw_card-container__tooltip .tw_card-info > div {
@@ -817,15 +838,24 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .tw_card-container__tooltip .tw_card-info {
-  @apply p-0 ml-9;
+  @apply p-0 ml-9 lg:ml-0 lg:p-2;
 }
 
 .tw_map-phone {
-  @apply flex items-center space-x-1 mt-3;
+  @apply flex items-center space-x-1 mt-2 mb-2;
 }
 
 .tw_card-footer {
-  @apply bg-[#eaf5ff] flex justify-between -mx-5 -mb-5 px-5 py-3 border-solid border-t border-gray-200;
+  @apply bg-[#eaf5ff] 
+    flex 
+    justify-between 
+    -mx-5 
+    -mb-5 
+    px-5 
+    py-3 
+    border-solid 
+    border-t 
+    border-gray-200;
 }
 
 body.page-id-24695 .tw_card-footer {
@@ -833,11 +863,35 @@ body.page-id-24695 .tw_card-footer {
 }
 
 .tw_btn-primary {
-  @apply text-[17px] block px-5 py-1.5 rounded font-medium text-white bg-[--custom-color-primary-blue] hover:text-white hover:bg-blue-800;
+  @apply text-[13px] 
+    block 
+    px-5 
+    py-1.5 
+    rounded 
+    font-medium 
+    text-white 
+    bg-[--custom-color-primary-blue] 
+    lg:text-[17px] 
+    hover:text-white 
+    hover:bg-blue-800;
 }
 
 .tw_btn-secondary {
-  @apply text-[17px] block px-5 py-1.5 rounded font-medium text-[--custom-color-primary-blue] bg-white border border-solid border-gray-300 hover:text-white hover:bg-blue-800 hover:border-blue-800;
+  @apply text-[13px] 
+    block 
+    px-5 
+    py-1.5 
+    rounded 
+    font-medium 
+    text-[--custom-color-primary-blue] 
+    bg-white 
+    border 
+    border-solid 
+    lg:text-[17px] 
+    border-gray-300 
+    hover:text-white 
+    hover:bg-blue-800 
+    hover:border-blue-800;
 }
 
 .tw_card-container__infobox .tw_btn-primary,

@@ -267,7 +267,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
   </div>
 </div>
 
-<div class="tw_card-footer !hidden lg:!block">
+<div class="tw_card-footer !hidden lg:!flex">
   <a class="tw_btn-primary" href="/get-started-now/location/?title={{:title}}">Make Appointment</a>
   <a class="tw_btn-secondary" href="{{:link}}">Learn More &rarr;</a>
 </div>
@@ -276,7 +276,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 </script>
 
 
-<!-- <div class="text-3xl"></div> -->
+<!-- <div class="text-3xl !hidden lg:!flex"></div> -->
 
 
 <script type="text/javascript">
