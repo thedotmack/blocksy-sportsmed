@@ -151,20 +151,11 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
   height: 72vh !important;
 }
 
-body.page-id-26145,
-body.page-id-26145 #main,
-body.page-id-26145 #main-container,
-body.page-id-26145 .ct-container-full,
-body.page-id-26145 article.page,
-body.page-id-26145 .entry-content {
-  /* @apply absolute top-0 bottom-0 left-0 right-0 overflow-hidden h-full w-full; */
-}
-
 body.page-id-26145 {
   @apply fixed overflow-hidden top-0 left-0 right-0 h-[100svh];
 }
 
-#asl-storelocator.asl-template-1 {
+body.page-id-26145 #asl-storelocator.asl-template-1 {
   @apply overflow-hidden 
     absolute 
     m-0 
@@ -192,17 +183,16 @@ body.page-id-26145 {
     lg:w-5/12;
 }
 
+/*  */
 .map-column-1 .asl-panel-inner {
-  @apply pt-80
+  @apply pt-64
   lg:pt-72;
 }
 
 /* map */
 .map-column-2 {
   @apply w-full 
-    h-60
-    h-56
-    h-48
+    h-36
     shadow-lg 
     absolute 
     z-10 
@@ -212,10 +202,6 @@ body.page-id-26145 {
     lg:relative 
     lg:h-[calc(100vh-72px)] 
     lg:w-7/12;
-}
-
-.map-column-1 .tw_card-container {
-  @apply m-5 lg:m-10;
 }
 
 .map-column-1 .Filter_section {
@@ -249,6 +235,14 @@ body.page-id-26145 {
     lg:!text-4xl 
     lg:mb-3 
     xl:!text-5xl;
+}
+
+.map-column-1 .tw_card-container {
+  @apply m-5 px-2.5 lg:p-5 lg:m-10;
+}
+
+.map-column-1 .tw_card-container .tw_card-info {
+  @apply p-2.5 lg:p-5;
 }
 
 .map-column-2 #asl-map-canv {
@@ -322,11 +316,11 @@ body.page-id-26145 {
   display: none !important;
 }
 
-#asl-storelocator.asl-cont .asl-panel {
+body.page-id-26145 #asl-storelocator.asl-cont .asl-panel {
   @apply absolute top-0 bottom-0 left-0 right-0 overflow-scroll;
 }
 
-#asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
+body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
   @apply !bg-transparent;
 }
 
@@ -548,17 +542,6 @@ a[href^="tel:"]:not(.map-phone) {
   @apply inline-block py-1 px-2.5 mx-1 text-xl no-underline rounded-lg bg-white text-blue-600 font-bold hover:bg-blue-600 hover:text-white;
 }
 
-/* .gfield.image-choices-field .image-choices-choice:not(.image-choices-choice-selected) {
-  display: none !important;
-}
-.gform_wrapper.gravity-theme .gfield--type-choice.image-choices-field .image-choices-choice:not(.image-choices-choice-selected) {
-  display: none !impoortant;
-} */
-
-.sportsmed__form-container {
-  /* @apply bg-[#F1F8FF] shadow relative p-4 sm:rounded-2xl md:p-8; */
-}
-
 #asl-storelocator.asl-cont.asl-template-list
   .asl-search-cont
   .asl-sort-list
@@ -693,86 +676,6 @@ input[type="checkbox"].gfield-choice-input {
   @apply text-left;
 }
 
-/* 
-.image-choices-field div.gfield_checkbox {
-  @apply flex justify-center !-mx-2.5;
-}
-
-.image-choices-field div.gfield_radio {
-  @apply flex justify-center !space-y-3 md:!space-y-0 md:!space-x-6 flex-wrap md:flex-nowrap;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice {
-  @apply w-full md:w-1/2 !mt-0 !mb-2 !ml-0 !mr-0 border-2 rounded-lg overflow-hidden opacity-50 grayscale hover:opacity-60 hover:grayscale-0;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice-selected {
-  @apply shadow-lg from-blue-200 via-blue-50 to-blue-200 bg-gradient-to-r border-blue-300 relative opacity-100 grayscale-0 hover:opacity-100;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice-image-wrap {
-  @apply w-1/3 pb-[33%] !border-r-2 !border-white md:!flex md:w-full md:pb-[70%];
-}
-
-.image-choices-field div.gfield_checkbox .image-choices-choice {
-  @apply w-[22%] !mt-0 !mb-0 !mx-2.5 border-2 rounded-lg overflow-hidden;
-}
-
-.image-choices-field div.gfield_checkbox .image-choices-choice-image-wrap {
-  @apply !flex w-full !bg-none h-32;
-}
-
-.image-choices-field div.gfield_checkbox .image-choices-choice-image-wrap img {
-  @apply block w-full p-6 pb-0 grayscale;
-}
-
-.image-choices-field div.gfield_checkbox .image-choices-choice-text h3 {
-  @apply text-xl leading-tight font-extralight text-blue-900;
-}
-
-
-.gform_wrapper.gravity-theme .image-choices-field .gfield_description strong {
-  @apply text-blue-600 font-normal tracking-wide;
-}
-
-.gform_wrapper.gravity-theme .gsection {
-  @apply !mt-3;
-}
-
-.gform_wrapper.gravity-theme .gsection h3.gsection_title {
-  @apply text-gray-600;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice-selected:after {
-  content: "✓";
-  @apply absolute z-20 top-2.5 right-2.5 md:top-5 md:right-5 text-xl md:text-2xl bg-green-600 ring-2 ring-white shadow-lg font-bold rounded-full h-8 w-8 md:h-10 md:w-10 leading-8 md:leading-10 text-white;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice label {
-  @apply !p-0 border-0 !flex md:!block items-center;
-}
-
-.image-choices-field div.gfield_checkbox .image-choices-choice label {
-  @apply !p-0 border-0;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice-text h3 {
-  @apply text-2xl;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice-text p {
-  @apply mb-3;
-}
-
-.image-choices-field div.gfield_radio .image-choices-choice-text small {
-  @apply text-sm;
-} */
-
-/* styles.css */
-
-#asl-storelocator.asl-cont * {
-}
-
 .tw_card-container,
 .sl-no-item {
   @apply p-4 mb-10 flex-col rounded-lg border border-gray-200 border-solid bg-white overflow-hidden shadow relative hover:shadow-2xl hover:z-10 hover:shadow-slate-500/30 transition-shadow cursor-pointer;
@@ -783,7 +686,15 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .map-column-2 .tw_map-phone {
-  @apply mb-0 lg:mb-2;
+  @apply hidden lg:block lg:mb-2;
+}
+
+.map-column-2 .tw_card-info {
+  @apply flex-row;
+}
+
+.map-column-2 .tw_card-image {
+  @apply hidden lg:block lg:h-20 lg:w-20;
 }
 
 .tw_card-container.tw_card-container__infobox {
@@ -811,12 +722,12 @@ input[type="checkbox"].gfield-choice-input {
     lg:h-48;
 }
 
-.tw_card-container__infobox .tw_card-image {
-  @apply w-[72px] h-[72px];
+.map-column-1 .tw_card-image {
+  @apply w-32 h-32;
 }
 
 .tw_card-content {
-  @apply flex justify-between flex-row-reverse items-center;
+  @apply flex justify-between items-center;
 }
 .tw_card-header {
   @apply flex space-x-3;
@@ -835,15 +746,19 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .tw_card-subtitle {
-  @apply text-sm text-[--custom-color-subtitle];
+  @apply !text-xs lg:text-sm text-[--custom-color-subtitle];
 }
 
 .tw_card-info {
   @apply font-medium text-[14px] leading-normal py-4 px-3 text-[--custom-color-subtitle];
 }
 
+.map-column-1 .tw_card-title {
+  @apply text-base;
+}
+
 .map-column-1 .tw_card-info {
-  @apply lg:text-[17px];
+  @apply text-[13px] lg:text-[17px];
 }
 
 .tw_card-container__tooltip .tw_card-info > div {

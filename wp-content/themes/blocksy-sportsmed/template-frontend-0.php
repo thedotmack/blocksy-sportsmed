@@ -258,7 +258,6 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
 
   <div class="tw_card-content">
 
-    <img class="tw_card-image" src="{{:featured_image_url}}">
 
     <div class="tw_card-body">
       <div class="tw_card-header">
@@ -285,6 +284,9 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
         </a>
       </div>
     </div>
+
+    <img class="tw_card-image" src="{{:featured_image_url}}">
+
   </div>
 
   <div class="tw_card-footer">
@@ -302,8 +304,6 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
   <div class="tw_card-container tw_card-container__infobox" data-id="{{:id}}">
 
 <div class="tw_card-content">
-
-  <img class="tw_card-image" src="{{:featured_image_url}}">
 
   <div class="tw_card-body">
     <div class="tw_card-header">
@@ -330,6 +330,9 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
       </a>
     </div>
   </div>
+
+  <img class="tw_card-image" src="{{:featured_image_url}}">
+
 </div>
 
 <div class="tw_card-footer">

@@ -193,8 +193,6 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
   <div class="tw_card-content">
 
-    <img class="tw_card-image" src="{{:featured_image_url}}">
-
     <div class="tw_card-body">
       <div class="tw_card-header">
         <?php $logomark = wp_get_attachment_image_src(25165, 'full'); ?>
@@ -220,6 +218,9 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
         </a>
       </div>
     </div>
+
+    <img class="tw_card-image" src="{{:featured_image_url}}">
+
   </div>
 
   <div class="tw_card-footer">
@@ -237,8 +238,6 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
   <div class="tw_card-container tw_card-container__infobox tw_card-container__tooltip" data-id="{{:id}}">
 <div class="tw_card-content">
-
-  <img class="tw_card-image" src="{{:featured_image_url}}">
 
   <div class="tw_card-body">
     <div class="tw_card-header">
@@ -265,6 +264,9 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
       </a>
     </div>
   </div>
+
+  <img class="tw_card-image" src="{{:featured_image_url}}">
+
 </div>
 
 <div class="tw_card-footer !hidden lg:!flex">
