@@ -770,7 +770,7 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .map-column-1 .tw_card-info {
-  @apply text-[13px] lg:text-[17px];
+  @apply text-[16px] lg:text-[17px];
 }
 
 .tw_map-phone {
@@ -795,7 +795,7 @@ body.page-id-24695 .tw_card-footer {
 }
 
 .tw_btn-primary {
-  @apply text-[13px] 
+  @apply text-[15px] 
     block 
     px-5 
     py-1.5 
@@ -809,7 +809,7 @@ body.page-id-24695 .tw_card-footer {
 }
 
 .tw_btn-secondary {
-  @apply text-[13px] 
+  @apply text-[15px] 
     block 
     px-5 
     py-1.5 
