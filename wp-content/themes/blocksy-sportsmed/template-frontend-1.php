@@ -82,9 +82,9 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
     <div class="map-column-1 relative">
 
       <?php if ($all_configs['advance_filter']) : ?>
-        <div class="Filter_section">
+        <div class="Filter_section border-4 border-solid border-l-0 border-b-0 border-t-0 border-slate-200">
 
-          <img class="absolute z-0 inset-0 ml-5 object-contain object-left w-full h-full animate__animated animate__fadeIn animate__delay-4s" src="https://spineandsportsmed.local/wp-content/uploads/2023/07/bg-sportsman@2x.jpg">
+          <img class="absolute z-0 inset-0 object-contain object-center w-full h-full animate__animated animate__fadeIn animate__delay-4s" src="https://spineandsportsmed.local/wp-content/uploads/2023/07/bg-sportsman@2x.jpg">
 
           <div class="search_filter">
             <style>

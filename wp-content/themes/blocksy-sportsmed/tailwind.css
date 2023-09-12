@@ -193,18 +193,20 @@ body.page-id-26145 {
 }
 
 .map-column-1 .asl-panel-inner {
-  @apply pt-[46vh]
-  lg:pt-[29vh];
+  @apply pt-80
+  lg:pt-72;
 }
 
 /* map */
 .map-column-2 {
   @apply w-full 
-    h-[30vh] 
+    h-60
+    h-56
+    h-48
     shadow-lg 
     absolute 
     z-10 
-    top-[16vh] 
+    top-28
 
     lg:top-0 
     lg:relative 
@@ -224,12 +226,11 @@ body.page-id-26145 {
     right-0 
     z-20 
     shadow-md 
-    
-    h-[16vh] 
+    h-28 
     
     lg:pb-5
     lg:pt-5 
-    lg:h-auto;
+    lg:h-72;
 }
 
 .map-column-1 .Filter_section .search_filter {
@@ -239,10 +240,10 @@ body.page-id-26145 {
 .map-column-1 .Filter_section .search_filter__title {
   @apply text-blue-900 
     mt-0 
-    pt-3
+    pt-2
     pl-1
-    !text-2xl 
-    !font-bold 
+    text-3xl 
+    font-bold 
     mb-2 
     
     lg:!text-4xl 
@@ -461,7 +462,7 @@ body.page-id-26145 {
   .search_filter
   .sl-search-group
   .asl-search-name {
-  @apply text-xl !h-auto py-2.5 px-3;
+  @apply border-slate-400;
 }
 
 #asl-storelocator.asl-cont.asl-template-0
@@ -777,6 +778,14 @@ input[type="checkbox"].gfield-choice-input {
   @apply p-4 mb-10 flex-col rounded-lg border border-gray-200 border-solid bg-white overflow-hidden shadow relative hover:shadow-2xl hover:z-10 hover:shadow-slate-500/30 transition-shadow cursor-pointer;
 }
 
+.map-column-2 .tw_card-container {
+  @apply p-2 lg:p-4;
+}
+
+.map-column-2 .tw_map-phone {
+  @apply mb-0 lg:mb-2;
+}
+
 .tw_card-container.tw_card-container__infobox {
   @apply mb-0 shadow-md;
 }
@@ -830,7 +839,11 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .tw_card-info {
-  @apply font-medium text-[15px] py-4 px-3 text-[--custom-color-subtitle];
+  @apply font-medium text-[14px] leading-normal py-4 px-3 text-[--custom-color-subtitle];
+}
+
+.map-column-1 .tw_card-info {
+  @apply lg:text-[17px];
 }
 
 .tw_card-container__tooltip .tw_card-info > div {
