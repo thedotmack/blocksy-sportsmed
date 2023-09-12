@@ -186,7 +186,9 @@ body.page-id-26145 #asl-storelocator.asl-template-1 {
 /*  */
 .map-column-1 .asl-panel-inner {
   @apply pt-64
-  lg:pt-72;
+  pb-32
+  lg:pt-72
+  lg:pb-0;
 }
 
 /* map */
