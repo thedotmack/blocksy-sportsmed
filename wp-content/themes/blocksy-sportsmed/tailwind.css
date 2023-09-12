@@ -718,12 +718,24 @@ input[type="checkbox"].gfield-choice-input {
     w-1/4
     h-20
     
-    lg:w-1/2 
-    lg:h-48;
+    lg:w-2/5 
+    lg:h-40;
 }
 
 .map-column-1 .tw_card-image {
   @apply w-32 h-32;
+}
+
+.tw_card-container__tooltip .tw_card-info > div {
+  @apply hidden lg:block;
+}
+
+.tw_card-container__tooltip .tw_card-info {
+  @apply p-0 ml-9 lg:ml-0 lg:p-2;
+}
+
+.tw_card-container__tooltip .tw_card-image {
+  @apply !w-16 !h-16;
 }
 
 .tw_card-content {
@@ -750,7 +762,7 @@ input[type="checkbox"].gfield-choice-input {
 }
 
 .tw_card-info {
-  @apply font-medium text-[14px] leading-normal py-4 px-3 text-[--custom-color-subtitle];
+  @apply font-medium text-[14px] lg:text-[17px] leading-normal py-4 px-3 text-[--custom-color-subtitle];
 }
 
 .map-column-1 .tw_card-title {
@@ -759,14 +771,6 @@ input[type="checkbox"].gfield-choice-input {
 
 .map-column-1 .tw_card-info {
   @apply text-[13px] lg:text-[17px];
-}
-
-.tw_card-container__tooltip .tw_card-info > div {
-  @apply hidden lg:block;
-}
-
-.tw_card-container__tooltip .tw_card-info {
-  @apply p-0 ml-9 lg:ml-0 lg:p-2;
 }
 
 .tw_map-phone {

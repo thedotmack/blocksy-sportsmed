@@ -301,7 +301,7 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
 <!-- <div class="backdrop-blur-sm"> -->
 
 <script id="asl_too_tip" type="text/x-jsrender">
-  <div class="tw_card-container tw_card-container__infobox" data-id="{{:id}}">
+  <div class="tw_card-container tw_card-container__infobox tw_card-container__tooltip" data-id="{{:id}}">
 
 <div class="tw_card-content">
 
