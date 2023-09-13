@@ -933,3 +933,53 @@ body.page-id-24695 .tw_card-footer {
 .kb-splide .splide__arrow--next {
   @apply !-right-8 lg:!-right-10 xl:!-right-14;
 }
+
+/* ***** FORCE ALL THE RESPONSIVENESS ****** */
+
+:root {
+  /* --container-width: var(--normal-container-max-width); */
+}
+
+@media only screen and (min-width: 768px) {
+  .stk-block .stk-block.aligncenter,
+  .stk-block:is(.aligncenter, .alignwide, .alignfull)
+    > .stk-content-align:not(.alignwide):not(.alignfull) {
+    /* margin-left: auto;
+      margin-right: auto;
+      max-width: var(--stk-block-default-width,var(--stk-block-width-default-detected,900px));
+      width: 100%; */
+  }
+}
+
+.ct-container,
+.wp-block-stackable-column {
+  @apply px-5 xl:px-2.5 w-full max-w-[1290px];
+}
+
+/* 
+  --stk-block-margin-bottom: 24px;
+  --stk-container-background-color: #fff;
+  --stk-container-border-radius: 0px;
+  --stk-container-box-shadow: 0px 4px 24px #0000000a;
+  --stk-container-color: #1e1e1e;
+  --stk-container-padding: 32px 32px;
+  --stk-container-padding-large: 64px 80px;
+  --stk-container-padding-small: 16px 32px;
+  --stk-column-margin: 12px;
+  --stk-block-background-color: #f1f1f1;
+  --stk-block-background-padding: 24px 24px;
+  --stk-button-background-color: #008de4;
+  --stk-button-padding: 12px 16px;
+  --stk-icon-button-padding: 12px;
+  --stk-button-text-color: #fff;
+  --stk-button-gap: 12px;
+  --stk-button-ghost-border-width: 2px;
+  --stk-button-column-gap: 12px;
+  --stk-button-row-gap: 12px;
+  --stk-icon-size: 36px;
+  --stk-icon-color: #a6a6a6;
+  --stk-icon-shape-color: #ddd;
+  --stk-subtitle-size: 16px;
+  --stk-subtitle-color: #39414d;
+  --stk-tab-accent-color: #008de4; 
+*/
