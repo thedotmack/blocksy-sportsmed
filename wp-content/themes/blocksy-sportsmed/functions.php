@@ -94,11 +94,11 @@ function wpb_custom_image_sizes($size_names)
 add_filter('image_size_names_choose', 'wpb_custom_image_sizes');
 
 
-function hide_admin_bar_for_specific_page()
-{
-  if (is_page('get-started-now-full-screen')) {
-    return false;
-  }
-  return true;
-}
-add_filter('show_admin_bar', 'hide_admin_bar_for_specific_page');
+// function hide_admin_bar_for_specific_page()
+// {
+//   if (is_page('get-started-now-full-screen')) {
+//     return false;
+//   }
+//   return true;
+// }
+// add_filter('show_admin_bar', 'hide_admin_bar_for_specific_page');
