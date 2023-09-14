@@ -55,7 +55,7 @@ add_action('enqueue_block_editor_assets', 'load_my_gutenberg_assets');
 
 include_once('inc/sync-wpseo-locations-to-asl/wpseo-to-asl-syncer-v5.php');
 
-function get_wpseo_locations_count()
+function get_wpseo_locations_count($exclude_category = '')
 {
   $post_type = 'wpseo_locations';
 
@@ -64,6 +64,18 @@ function get_wpseo_locations_count()
     'post_status' => 'publish',
     'posts_per_page' => -1,
   );
+
+  // If an exclude category is provided, add a tax_query to the arguments
+  if (!empty($exclude_category)) {
+    $args['tax_query'] = array(
+      array(
+        'taxonomy' => 'wpseo_locations_category', // change this if you're using a custom taxonomy
+        'field'    => 'slug',
+        'terms'    => $exclude_category,
+        'operator' => 'NOT IN'
+      ),
+    );
+  }
 
   $query = new WP_Query($args);
 
@@ -74,13 +86,19 @@ function get_wpseo_locations_count()
   return 0;
 }
 
-// Step 3: Create the shortcode
-function wpseo_locations_count_shortcode()
+function wpseo_locations_count_shortcode($atts)
 {
-  return get_wpseo_locations_count();
+  // Extract attributes from the shortcode
+  $attributes = shortcode_atts(
+    array(
+      'exclude_category' => '',  // Default value is an empty string
+    ),
+    $atts
+  );
+
+  return get_wpseo_locations_count($attributes['exclude_category']);
 }
 add_shortcode('total_locations', 'wpseo_locations_count_shortcode');
-
 
 
 

@@ -2504,8 +2504,7 @@ body.page-id-24695 .tw_card-footer {
   }
 }
 
-.ct-container,
-.wp-block-stackable-column {
+.ct-container {
   width: 100%;
   max-width: 1290px;
   padding-left: 1.25rem;
@@ -2513,8 +2512,7 @@ body.page-id-24695 .tw_card-footer {
 }
 
 @media (min-width: 1280px) {
-  .ct-container,
-.wp-block-stackable-column {
+  .ct-container {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }

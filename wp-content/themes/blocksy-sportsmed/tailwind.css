@@ -951,8 +951,7 @@ body.page-id-24695 .tw_card-footer {
   }
 }
 
-.ct-container,
-.wp-block-stackable-column {
+.ct-container {
   @apply px-5 xl:px-2.5 w-full max-w-[1290px];
 }
 
