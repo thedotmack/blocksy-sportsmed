@@ -2520,6 +2520,103 @@ body.page-id-24695 .tw_card-footer {
   }
 }
 
+.stk--block-horizontal-flex.stk--column-flex.stk-block-content.stk-inner-blocks.stk-59a286d-inner-blocks {
+  flex-direction: column;
+}
+
+.stk--block-horizontal-flex.stk--column-flex.stk-block-content.stk-inner-blocks.stk-59a286d-inner-blocks > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+@media (min-width: 1024px) {
+  .stk--block-horizontal-flex.stk--column-flex.stk-block-content.stk-inner-blocks.stk-59a286d-inner-blocks {
+    flex-direction: row;
+  }
+
+  .stk--block-horizontal-flex.stk--column-flex.stk-block-content.stk-inner-blocks.stk-59a286d-inner-blocks > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+}
+
+.stk-a889bdb {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (min-width: 1024px) {
+  .stk-a889bdb {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.stk-a889bdb-inner-blocks {
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.stk-a889bdb-inner-blocks > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.stk-a889bdb-inner-blocks {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+@media (min-width: 1024px) {
+  .stk-a889bdb-inner-blocks {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .stk-a889bdb-inner-blocks > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+}
+
+.stk-a889bdb-inner-blocks .stk-block-image {
+  width: 25%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .stk-a889bdb-inner-blocks .stk-block-image {
+    width: 8.333333%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stk-a889bdb-inner-blocks .stk-block-image {
+    width: 100%;
+  }
+}
+
+.stk-b9336ad img,
+.stk-5f7d6e0 img {
+  -o-object-position: left;
+     object-position: left;
+}
+
+@media (min-width: 768px) {
+  .stk-b9336ad img,
+.stk-5f7d6e0 img {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+
 /* 
   --stk-block-margin-bottom: 24px;
   --stk-container-background-color: #fff;
