@@ -19,7 +19,6 @@ if ($all_configs['display_list'] == '0' || $all_configs['first_load'] == '3' || 
 else if ($all_configs['first_load'] == '5') {
   $class .= ' sl-search-only';
 }
-
 if ($all_configs['pickup'] || $all_configs['ship_from'])
   $class .= ' sl-pickup-tmpl';
 
@@ -46,7 +45,7 @@ $class .= ' ' . $all_configs['full_height'];
 
 $layout_code        = ($all_configs['layout'] == '1'  || $all_configs['layout'] == '2') ? '1' : '0';
 $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['default-addr'] : '';
-$container_class    = (isset($all_configs['full_width']) && $all_configs['full_width']) ? 'sl-container-fluid' : 'sl-container';
+$container_class    = (isset($all_configs['full_width']) && $all_configs['full_width']) ? '' : '';
 
 ?>
 <style type="text/css">
@@ -92,121 +91,108 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
           </div>
         </div>
       <?php endif; ?>
+
       <?php if ($all_configs['advance_filter']) : ?>
-        <div class="sl-row gutters-40 Filter_section mb-4">
 
+        <div class="Filter_section flex items-baseline space-x-2.5 mb-4">
 
-          <div class="pol-lg-4 pol-md-5 pol-sm-12 search_filter">
+          <div class="search_filter w-full lg:w-1/3">
             <div class="mb-2 font-semibold !text-sm"><?php echo asl_esc_lbl('search_loc') ?></div>
-            <div class="sl-search-group d-flex">
+            <div class="sl-search-group flex">
               <input type="text" value="<?php echo $default_addr ?>" data-submit="disable" tabindex="2" id="auto-complete-search" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>" class="<?php echo $search_type_class ?> form-control isp_ignore">
               <button type="button" class="span-geo"><i class="<?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
             </div>
           </div>
 
+          <div class="asl-advance-filters hidden lg:flex lg:w-2/3">
 
-          <div class="pol-lg-8 pol-md-7 pol-sm-12">
-            <div class="sl-row">
-              <div class="pol-sm-12 asl-advance-filters hide">
-                <div class="flex space-x-2.5">
+            <div class="flex-1 range_filter asl-ddl-filters hidden">
+              <label><?php echo asl_esc_lbl('in') ?></label>
+              <div class="rangeFilter asl-filter-cntrl">
+                <input id="asl-radius-slide" type="text" class="span2" />
+                <span class="rad-unit"><?php echo asl_esc_lbl('radius') ?>: <span id="asl-radius-input"></span><span id="asl-dist-unit"><?php echo asl_esc_lbl('km', 'asl_locator') ?></span></span>
+              </div>
+            </div>
 
-
-                  <div class="flex-1 range_filter asl-ddl-filters hidden">
-                    <label><?php echo asl_esc_lbl('in') ?></label>
-                    <div class="rangeFilter asl-filter-cntrl">
-                      <input id="asl-radius-slide" type="text" class="span2" />
-                      <span class="rad-unit"><?php echo asl_esc_lbl('radius') ?>: <span id="asl-radius-input"></span><span id="asl-dist-unit"><?php echo asl_esc_lbl('km', 'asl_locator') ?></span></span>
-                    </div>
-                  </div>
-
-
-                  <div class="asl-ddl-filters flex-1">
-                    <div class="asl-filter-cntrl">
-                      <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[0]) ?></label>
-                      <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[0] ?>_filter">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="asl-ddl-filters flex-1">
-                    <div class="asl-filter-cntrl">
-                      <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[1]) ?></label>
-                      <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[1] ?>_filter">
-                      </div>
-                    </div>
-                  </div>
-
+            <div class="asl-ddl-filters flex-1">
+              <div class="asl-filter-cntrl">
+                <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[0]) ?></label>
+                <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[0] ?>_filter">
                 </div>
               </div>
             </div>
+
+            <div class="asl-ddl-filters flex-1">
+              <div class="asl-filter-cntrl">
+                <label class="asl-cntrl-lbl"><?php echo asl_esc_lbl($filter_ddl[1]) ?></label>
+                <div class="sl-dropdown-cont" id="<?php echo $filter_ddl[1] ?>_filter">
+                </div>
+              </div>
+            </div>
+
           </div>
+
         </div>
       <?php endif; ?>
 
+      <div class="sl-main-cont flex flex-col-reverse lg:flex-row lg:space-x-5">
 
+        <div id="asl-panel" class="asl-panel asl_locator-panel lg:w-1/3">
 
-      <div class="sl-row">
-        <div class="pol-12">
-          <div class="sl-main-cont">
+          <div class="asl-overlay" id="map-loading">
+            <div class="white"></div>
+            <div class="sl-loading">
+              <i class="animate-sl-spin icon-spin3"></i>
+              <?php echo asl_esc_lbl('loading') ?>
+            </div>
+          </div>
 
-            <div class="sl-row sl-main-row gutters-40">
-
-              <div id="asl-panel" class="asl-panel pol-md-5 pol-lg-4 asl_locator-panel">
-
-                <div class="asl-overlay" id="map-loading">
-                  <div class="white"></div>
-                  <div class="sl-loading">
-                    <i class="animate-sl-spin icon-spin3"></i>
-                    <?php echo asl_esc_lbl('loading') ?>
-                  </div>
-                </div>
-
-                <?php if (!$all_configs['advance_filter']) : ?>
-                  <div class="inside search_filter">
-                    <p class="mb-2"><?php echo asl_esc_lbl('search_loc') ?></p>
-                    <div class="asl-store-search">
-                      <input type="text" value="<?php echo $default_addr ?>" id="auto-complete-search" class="<?php echo $search_type_class ?> form-control" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>">
-                      <button type="button" class="span-geo"><i class="asl-geo <?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
-                    </div>
-                  </div>
-                <?php endif; ?>
-
-                <!-- list -->
-                <div class="asl-panel-inner">
-                  <div class="top-title Num_of_store">
-                    <span><span class="sl-head-title"><?php echo $all_configs['head_title'] ?></span>: <span class="count-result">0</span></span>
-                    <?php if ($all_configs['branches'] == '1') : ?>
-                      <a title="<?php echo asl_esc_lbl('bck_to_list') ?>" class="sl-hide-branches d-none"><i class="icon-back mr-1"></i><?php echo asl_esc_lbl('bck_to_list') ?></a>
-                    <?php else : ?>
-                      <a class="asl-print-btn"><span><?php echo asl_esc_lbl('print') ?></span><span class="asl-print"></span></a>
-                    <?php endif; ?>
-                  </div>
-                  <div class="sl-main-cont-box">
-                    <div id="asl-list" class="sl-list-wrapper">
-                      <ul id="p-statelist" class="sl-list">
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="directions-cont hide">
-                  <div class="agile-modal-header">
-                    <button type="button" class="close"><span aria-hidden="true">×</span></button>
-                    <h4><?php echo asl_esc_lbl('store_direc') ?></h4>
-                  </div>
-                  <div class="rendered-directions" id="asl-rendered-dir" style="direction: ltr;"></div>
-                </div>
+          <?php if (!$all_configs['advance_filter']) : ?>
+            <div class="inside search_filter">
+              <p class="mb-2"><?php echo asl_esc_lbl('search_loc') ?></p>
+              <div class="asl-store-search">
+                <input type="text" value="<?php echo $default_addr ?>" id="auto-complete-search" class="<?php echo $search_type_class ?> form-control" placeholder="<?php echo asl_esc_lbl('enter_loc') ?>">
+                <button type="button" class="span-geo"><i class="asl-geo <?php echo $geo_btn_class ?>" title="<?php echo ($all_configs['geo_button'] == '1') ? __('Current Location', 'asl_locator') : __('Search Location', 'asl_locator') ?>"></i></button>
               </div>
-              <div class="pol-md-7 pol-lg-8 asl-map">
-                <div class="map-image">
-                  <div id="asl-map-canv" class="asl-map-canv"></div>
-                  <?php include ASL_PLUGIN_PATH . 'public/partials/_agile_modal.php'; ?>
-                </div>
+            </div>
+          <?php endif; ?>
+
+          <!-- list -->
+          <div class="asl-panel-inner">
+            <div class="top-title Num_of_store">
+              <span><span class="sl-head-title"><?php echo $all_configs['head_title'] ?></span>: <span class="count-result">0</span></span>
+              <?php if ($all_configs['branches'] == '1') : ?>
+                <a title="<?php echo asl_esc_lbl('bck_to_list') ?>" class="sl-hide-branches d-none"><i class="icon-back mr-1"></i><?php echo asl_esc_lbl('bck_to_list') ?></a>
+              <?php else : ?>
+                <a class="asl-print-btn"><span><?php echo asl_esc_lbl('print') ?></span><span class="asl-print"></span></a>
+              <?php endif; ?>
+            </div>
+            <div class="sl-main-cont-box">
+              <div id="asl-list" class="sl-list-wrapper">
+                <ul id="p-statelist" class="sl-list">
+                </ul>
               </div>
             </div>
           </div>
+
+          <div class="directions-cont hide">
+            <div class="agile-modal-header">
+              <button type="button" class="close"><span aria-hidden="true">×</span></button>
+              <h4><?php echo asl_esc_lbl('store_direc') ?></h4>
+            </div>
+            <div class="rendered-directions" id="asl-rendered-dir" style="direction: ltr;"></div>
+          </div>
         </div>
+
+        <div class="asl-map mb-4 lg:mb-0 lg:w-2/3">
+          <div class="map-image">
+            <div id="asl-map-canv" class="asl-map-canv"></div>
+            <?php include ASL_PLUGIN_PATH . 'public/partials/_agile_modal.php'; ?>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 </div>
@@ -257,7 +243,6 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
   <div class="tw_card-container" data-id="{{:id}}">
 
   <div class="tw_card-content">
-
 
     <div class="tw_card-body">
       <div class="tw_card-header">

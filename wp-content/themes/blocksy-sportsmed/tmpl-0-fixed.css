@@ -4316,7 +4316,7 @@ $gray_color2: #666666;
   border: 1px solid #eee;
 }
 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
-  position: absolute;
+  /* position: absolute;
   overflow: hidden;
   flex-direction: column !important;
   display: flex;
@@ -4326,7 +4326,7 @@ $gray_color2: #666666;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-color: #fff;
+  background-color: #fff; */
 }
 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner .Num_of_store {
   width: 100%;
@@ -5277,9 +5277,9 @@ $gray_color2: #666666;
   border: 1px solid #b9b9b9;
 }
 #asl-storelocator.asl-cont .sl-main-cont .asl-map-canv {
-  height: 480px;
-  position: relative;
-  background: #eee;
+  /* height: 480px; */
+  /* position: relative; */
+  /* background: #eee; */
 }
 #asl-storelocator.asl-cont .sl-main-cont .asl-map-canv .asl-radius-cnt,
 #asl-storelocator.asl-cont .sl-main-cont .asl-map-canv .asl-reset-map {
