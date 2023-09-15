@@ -6106,7 +6106,7 @@ $gray_color2: #666666;
     .Filter_section
     .search_filter
     .sl-search-group {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
   }
 }
 @media (max-width: 414px) {

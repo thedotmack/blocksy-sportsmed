@@ -1109,31 +1109,6 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
   }
 }
 
-.wp-block-stackable-columns.alignfull.stk-block-columns.stk-block.stk-f8bfd94 {
-  height: 100svh;
-  overflow: hidden;
-}
-
-body.home #asl-storelocator.asl-cont #asl-panel {
-  height: calc(68svh - 72px);
-  overflow-y: scroll;
-}
-
-@media (min-width: 1024px) {
-  body.home #asl-storelocator.asl-cont #asl-panel {
-    height: 72vh;
-  }
-}
-
-body.home #asl-storelocator.asl-cont #asl-panel {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-body.home #asl-storelocator.asl-cont #asl-panel::-webkit-scrollbar {
-  display: none;
-}
-
 body.page-id-26145 {
   position: fixed;
   left: 0px;
@@ -2072,7 +2047,7 @@ input[type="checkbox"].gfield-choice-input:focus {
 .tw_card-container,
 .sl-no-item {
   position: relative;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
   cursor: pointer;
   flex-direction: column;
   overflow: hidden;
@@ -2087,6 +2062,8 @@ input[type="checkbox"].gfield-choice-input:focus {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(148 163 184 / 0.3);
+  --tw-shadow: var(--tw-shadow-colored);
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -2095,11 +2072,13 @@ input[type="checkbox"].gfield-choice-input:focus {
 .tw_card-container:hover,
 .sl-no-item:hover {
   z-index: 10;
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: rgb(100 116 139 / 0.3);
-  --tw-shadow: var(--tw-shadow-colored);
+}
+
+@media (min-width: 1024px) {
+  .tw_card-container,
+.sl-no-item {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .map-column-2 .tw_card-container {
@@ -2707,6 +2686,49 @@ body.page-id-24695 .tw_card-footer {
 #footer .ct-container {
   display: flex;
   justify-content: space-between;
+}
+
+body.home #asl-storelocator.asl-cont #asl-panel {
+  height: 44vh;
+  overflow-y: scroll;
+}
+
+@media (min-width: 1024px) {
+  body.home #asl-storelocator.asl-cont #asl-panel {
+    height: 72vh;
+  }
+}
+
+body.home #asl-storelocator.asl-cont #asl-panel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body.home #asl-storelocator.asl-cont #asl-panel::-webkit-scrollbar {
+  display: none;
+}
+
+/* spacer */
+
+.stk-63367dd {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .stk-63367dd {
+    display: block;
+  }
+}
+
+.wp-block-stackable-columns.alignfull.stk-block-columns.stk-block.stk-f8bfd94 {
+  /* @apply h-screen w-full overflow-hidden; */
+}
+
+.wp-block-stackable-columns.alignfull.stk-block-columns.stk-block.stk-f8bfd94
+  > .stk-row {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 }
 
 .hover\:border-blue-800:hover {

@@ -161,20 +161,6 @@ body.home #asl-storelocator.asl-cont #asl-map-canv {
   @apply h-[20svh] lg:h-[72vh];
 }
 
-.wp-block-stackable-columns.alignfull.stk-block-columns.stk-block.stk-f8bfd94 {
-  @apply h-[100svh] overflow-hidden;
-}
-
-body.home #asl-storelocator.asl-cont #asl-panel {
-  @apply h-[calc(68svh-72px)] overflow-y-scroll lg:h-[72vh];
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-body.home #asl-storelocator.asl-cont #asl-panel::-webkit-scrollbar {
-  display: none;
-}
-
 body.page-id-26145 {
   @apply fixed left-0 right-0 top-0 h-[100svh] overflow-hidden;
 }
@@ -692,7 +678,7 @@ input[type="checkbox"].gfield-choice-input {
 
 .tw_card-container,
 .sl-no-item {
-  @apply relative mb-10 cursor-pointer flex-col overflow-hidden rounded-lg border border-solid border-gray-200 bg-white p-4 shadow transition-shadow hover:z-10 hover:shadow-2xl hover:shadow-slate-500/30;
+  @apply relative mb-5 cursor-pointer flex-col overflow-hidden rounded-lg border border-solid border-gray-200 bg-white p-4 shadow shadow-slate-400/30 transition-shadow hover:z-10 lg:mb-10;
 }
 
 .map-column-2 .tw_card-container {
@@ -1006,4 +992,28 @@ body.page-id-24695 .tw_card-footer {
 
 #footer .ct-container {
   @apply flex justify-between;
+}
+
+body.home #asl-storelocator.asl-cont #asl-panel {
+  @apply h-[44vh] overflow-y-scroll lg:h-[72vh];
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body.home #asl-storelocator.asl-cont #asl-panel::-webkit-scrollbar {
+  display: none;
+}
+
+/* spacer */
+.stk-63367dd {
+  @apply hidden lg:block;
+}
+
+.wp-block-stackable-columns.alignfull.stk-block-columns.stk-block.stk-f8bfd94 {
+  /* @apply h-screen w-full overflow-hidden; */
+}
+
+.wp-block-stackable-columns.alignfull.stk-block-columns.stk-block.stk-f8bfd94
+  > .stk-row {
+  @apply sticky top-0 z-10;
 }
