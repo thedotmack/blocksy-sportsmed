@@ -1017,3 +1017,35 @@ body.home #asl-storelocator.asl-cont #asl-panel::-webkit-scrollbar {
   > .stk-row {
   @apply sticky top-0 z-10;
 }
+
+.ct-drawer-canvas .ct-widget.widget_block > p {
+  @apply hidden;
+}
+
+.ct-drawer-canvas .mobile-menu {
+  @apply mt-0 columns-2 gap-[10px] px-2.5 md:columns-3;
+}
+
+.ct-drawer-canvas .mobile-menu .ct-menu-link {
+  @apply mx-1 mb-2.5 rounded-md border border-solid border-slate-200 bg-white py-2.5 shadow shadow-slate-200/30;
+}
+
+.ct-drawer-canvas .mobile-menu .menu-item-22961 .sub-menu {
+  @apply hidden;
+}
+
+#offcanvas {
+  @apply !bg-[#E0EFFF]/90 !backdrop-blur-sm;
+}
+
+#offcanvas .ct-panel-content {
+  @apply p-0 md:p-5;
+}
+
+#offcanvas .ct-panel-content .site-logo-container {
+  @apply -ml-5;
+}
+
+#offcanvas .ct-panel-content > * {
+  @apply m-0 my-1 md:my-4;
+}
