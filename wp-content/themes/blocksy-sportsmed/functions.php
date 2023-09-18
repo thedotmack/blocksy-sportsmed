@@ -112,6 +112,13 @@ function wpb_custom_image_sizes($size_names)
 add_filter('image_size_names_choose', 'wpb_custom_image_sizes');
 
 
+function sportsmed_callrail_tracking()
+{ ?>
+  <script type="text/javascript" src="//cdn.callrail.com/group/163151525/73e9242b75d65efe233d001d/12/swap.js"></script>
+<?php }
+add_action('wp_footer', 'sportsmed_callrail_tracking');
+
+
 // function hide_admin_bar_for_specific_page()
 // {
 //   if (is_page('get-started-now-full-screen')) {
@@ -120,3 +127,28 @@ add_filter('image_size_names_choose', 'wpb_custom_image_sizes');
 //   return true;
 // }
 // add_filter('show_admin_bar', 'hide_admin_bar_for_specific_page');
+
+/* Tracking stuff 
+
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KLXT56');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+  */
