@@ -2889,7 +2889,7 @@ $gray_color2: #666666;
   .asl-ddl-filters
   ul.adropdown-menu.multiselect-container
   .btn.btn-default.multiselect-clear-filter {
-  border-color: #dee2e6ccc;
+  border-color: #dee2e6;
   color: #32373c;
   color: var(--sl-header-color, #32373c);
 }

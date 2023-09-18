@@ -9,6 +9,10 @@
   --custom-color-title: #101828;
   --custom-color-subtitle: #475467;
   --custom-color-primary-blue: #1470ef;
+
+  /* --selectionTextColor: var(custom-color-primary-blue);
+  --selectionBackgroundColor: var(custom-color-primary-blue); */
+
   /*
   --fontFamily: ct_font_satoshi, Sans-Serif;
     --fontWeight: 400;
@@ -223,7 +227,6 @@ body.page-id-26145 #asl-storelocator.asl-template-1 {
     top-0 
     z-20 
     h-28 
-    !bg-white 
     shadow-md 
     
     lg:h-72

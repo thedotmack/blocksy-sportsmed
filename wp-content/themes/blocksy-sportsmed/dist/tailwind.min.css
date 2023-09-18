@@ -912,6 +912,8 @@ select {
   --custom-color-title: #101828;
   --custom-color-subtitle: #475467;
   --custom-color-primary-blue: #1470ef;
+  /* --selectionTextColor: var(custom-color-primary-blue);
+  --selectionBackgroundColor: var(custom-color-primary-blue); */
   /*
   --fontFamily: ct_font_satoshi, Sans-Serif;
     --fontWeight: 400;
@@ -1198,8 +1200,6 @@ body.page-id-26145 #asl-storelocator.asl-template-1 {
   top: 0px;
   z-index: 20;
   height: 7rem;
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);

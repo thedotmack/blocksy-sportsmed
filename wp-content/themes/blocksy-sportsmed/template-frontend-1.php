@@ -49,30 +49,6 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
 
 ?>
 <style type="text/css">
-  <?php echo $css_code; ?>.asl-cont .onoffswitch .onoffswitch-label .onoffswitch-switch:before {
-    content: "<?php echo asl_esc_lbl('open') ?>" !important;
-  }
-
-  .asl-cont .onoffswitch .onoffswitch-label .onoffswitch-switch:after {
-    content: "<?php echo asl_esc_lbl('all') ?>" !important;
-  }
-
-  @media (max-width: 767px) {
-    #asl-storelocator.asl-cont .asl-panel {
-      order: <?php echo $panel_order ?>;
-    }
-  }
-
-  .asl-cont.sl-search-only .Filter_section+.sl-row {
-    display: none;
-  }
-
-  .asl-cont .sl-hide-branches,
-  .asl-cont .sl-hide-branches:hover {
-    color: #FFF !important;
-    text-decoration: none !important;
-    cursor: pointer;
-  }
 </style>
 
 <div id="asl-storelocator" class="storelocator-main asl-cont asl-template-0 asl-template-1 asl-layout-1 asl-bg-3 full-width asl-text-2">
@@ -82,7 +58,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
     <div class="map-column-1 relative">
 
       <?php if ($all_configs['advance_filter']) : ?>
-        <div class="Filter_section border-4 border-solid border-l-0 border-b-0 border-t-0 border-slate-200">
+        <div class="Filter_section bg-white border-4 border-solid border-l-0 border-b-0 border-t-0 border-slate-200">
 
           <img class="absolute z-0 inset-0 object-contain object-center w-full h-full animate__animated animate__fadeIn animate__delay-4s" src="https://spineandsportsmed.local/wp-content/uploads/2023/07/bg-sportsman@2x.jpg">
 
