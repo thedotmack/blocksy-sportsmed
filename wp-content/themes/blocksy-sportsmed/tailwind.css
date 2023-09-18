@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --narrow-container-max-width: 1024px;
+  /* --narrow-container-max-width: 1024px; */
   --content-vertical-spacing: 30px;
 
   --custom-color-title: #101828;
@@ -148,17 +148,6 @@
 }
 .gm-style {
   font: 400 11px var(--fontFamily) !important;
-}
-
-stk-column-wrapper
-  stk-block-column__content
-  stk-container
-  stk-e79b0cd-container
-  stk--no-background
-  stk--no-padding
-  body.home
-  #asl-storelocator.asl-cont {
-  @apply h-[calc(100svh-72px)] lg:block lg:h-auto;
 }
 
 body.home #asl-storelocator.asl-cont #asl-map-canv {
@@ -494,6 +483,10 @@ body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
 }
 
 /* ******************* */
+
+.sportsmed__form-container {
+  @apply rounded-none lg:rounded-[30px];
+}
 
 .sportsmed__form--footer {
   @apply py-6 text-center text-xs;
@@ -845,20 +838,41 @@ body.page-id-24695 .tw_card-footer {
 }
 
 .gform_wrapper.gravity-theme .gf_page_steps {
-  @apply border-b-0 text-right text-[#6b7dc5];
+  @apply mb-0 w-full border-b-0 text-right text-[#6b7dc5] md:w-full;
+}
+
+/* .gf-page-numbers-container {
+  @apply w-1/2 md:w-full;
+} */
+/* .stk-9ae3055-inner-blocks {
+  @apply max-w-[50%];
+} */
+
+/* make appointment logo */
+.stk-bb1797d {
+  @apply ml-2;
+}
+
+.gform_wrapper.gravity-theme .gf_page_steps .gf_step_pending {
+  @apply hidden md:inline-block;
+}
+
+.sportsmed__form-header-container {
+  @apply !mb-3;
 }
 
 .gform_wrapper.gravity-theme .gf_step {
-  margin: 12px 28px 0 15px;
+  @apply mb-0 ml-0 mr-2 mt-3 md:mr-7 lg:ml-4;
 }
 
 .gform_wrapper.gravity-theme .gf_step_number {
-  @apply border-2 border-[#6b7dc5] font-bold text-[#6b7dc5];
+  @apply h-7 w-7 border-2 border-[#6b7dc5] font-bold text-[#6b7dc5] lg:h-10 lg:w-10;
 }
 
 .gform_wrapper.gravity-theme .gf_step_label {
-  @apply font-bold;
+  @apply max-w-[44vw] overflow-hidden text-ellipsis whitespace-nowrap pl-2 font-bold md:pl-4;
 }
+
 .gform_wrapper.gravity-theme .gf_step.gf_step_active {
   @apply text-blue-200;
 }

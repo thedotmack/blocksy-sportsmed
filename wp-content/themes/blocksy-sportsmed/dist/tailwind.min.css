@@ -907,7 +907,7 @@ select {
 }
 
 :root {
-  --narrow-container-max-width: 1024px;
+  /* --narrow-container-max-width: 1024px; */
   --content-vertical-spacing: 30px;
   --custom-color-title: #101828;
   --custom-color-subtitle: #475467;
@@ -1074,31 +1074,6 @@ select {
 
 .gm-style {
   font: 400 11px var(--fontFamily) !important;
-}
-
-stk-column-wrapper
-  stk-block-column__content
-  stk-container
-  stk-e79b0cd-container
-  stk--no-background
-  stk--no-padding
-  body.home
-  #asl-storelocator.asl-cont {
-  height: calc(100svh - 72px);
-}
-
-@media (min-width: 1024px) {
-  stk-column-wrapper
-  stk-block-column__content
-  stk-container
-  stk-e79b0cd-container
-  stk--no-background
-  stk--no-padding
-  body.home
-  #asl-storelocator.asl-cont {
-    display: block;
-    height: auto;
-  }
 }
 
 body.home #asl-storelocator.asl-cont #asl-map-canv {
@@ -1544,6 +1519,16 @@ body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
 }
 
 /* ******************* */
+
+.sportsmed__form-container {
+  border-radius: 0px;
+}
+
+@media (min-width: 1024px) {
+  .sportsmed__form-container {
+    border-radius: 30px;
+  }
+}
 
 .sportsmed__form--footer {
   padding-top: 1.5rem;
@@ -2397,17 +2382,70 @@ body.page-id-24695 .tw_card-footer {
 }
 
 .gform_wrapper.gravity-theme .gf_page_steps {
+  margin-bottom: 0px;
+  width: 100%;
   border-bottom-width: 0px;
   text-align: right;
   --tw-text-opacity: 1;
   color: rgb(107 125 197 / var(--tw-text-opacity));
 }
 
+@media (min-width: 768px) {
+  .gform_wrapper.gravity-theme .gf_page_steps {
+    width: 100%;
+  }
+}
+
+/* .gf-page-numbers-container {
+  @apply w-1/2 md:w-full;
+} */
+
+/* .stk-9ae3055-inner-blocks {
+  @apply max-w-[50%];
+} */
+
+/* make appointment logo */
+
+.stk-bb1797d {
+  margin-left: 0.5rem;
+}
+
+.gform_wrapper.gravity-theme .gf_page_steps .gf_step_pending {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .gform_wrapper.gravity-theme .gf_page_steps .gf_step_pending {
+    display: inline-block;
+  }
+}
+
+.sportsmed__form-header-container {
+  margin-bottom: 0.75rem !important;
+}
+
 .gform_wrapper.gravity-theme .gf_step {
-  margin: 12px 28px 0 15px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .gform_wrapper.gravity-theme .gf_step {
+    margin-right: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gform_wrapper.gravity-theme .gf_step {
+    margin-left: 1rem;
+  }
 }
 
 .gform_wrapper.gravity-theme .gf_step_number {
+  height: 1.75rem;
+  width: 1.75rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(107 125 197 / var(--tw-border-opacity));
@@ -2416,8 +2454,26 @@ body.page-id-24695 .tw_card-footer {
   color: rgb(107 125 197 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1024px) {
+  .gform_wrapper.gravity-theme .gf_step_number {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
 .gform_wrapper.gravity-theme .gf_step_label {
+  max-width: 44vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 0.5rem;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .gform_wrapper.gravity-theme .gf_step_label {
+    padding-left: 1rem;
+  }
 }
 
 .gform_wrapper.gravity-theme .gf_step.gf_step_active {
