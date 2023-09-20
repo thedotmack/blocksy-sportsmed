@@ -199,6 +199,8 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
 <!-- This plugin is developed by "Agile Store Locator for WordPress" https://agilestorelocator.com -->
 
 
+<!-- <span class="inline sm:hidden">Change Location</span> <span class="hidden sm:inline">Find a SportsMed</span> -->
+
 <!-- div class="p-5 mt-5 mb-5 flex-col rounded-lg border border-gray-300 bg-white overflow-hidden shadow w-1/3" data-id="{{:id}}">
   
   <div class="flex space-x-3">

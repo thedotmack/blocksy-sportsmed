@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
 
     // Find the 'stk-block-content' inside the 'gf-page-numbers-container'
     var stkBlockContent = $(".gf-page-numbers-container").find(
-      ".stk-block-content"
+      ".stk-block-content",
     );
 
     // Move the contents of '.gf_page_steps' inside the 'stk-block-content'
@@ -107,8 +107,7 @@ jQuery(document).ready(function ($) {
 
   if ($("#gform_next_button_3_81").length) {
     var buttonHTML =
-      '<a id="gform-get-started-now-button" href="/get-started-now/" type="button" class="gform_previous_button gform-theme-button gform-theme-button--secondary button">&larr;&nbsp; Find a SportsMed</a>';
+      '<a id="gform-get-started-now-button" href="/get-started-now/" type="button" class="gform_previous_button gform-theme-button gform-theme-button--secondary button">&larr;&nbsp; <span class="inline sm:hidden">Change Location</span> <span class="hidden sm:inline">Find a SportsMed</span></a>';
     $("#gform_next_button_3_81").before(buttonHTML);
   }
-
 });

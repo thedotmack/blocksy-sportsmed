@@ -415,6 +415,10 @@ select {
   display: block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -1520,13 +1524,24 @@ body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
 
 /* ******************* */
 
+/* location container */
+
+#field_3_69 {
+  margin-top: 0.75rem;
+}
+
 .sportsmed__form-container {
   border-radius: 0px;
+  padding: 1rem;
 }
 
 @media (min-width: 1024px) {
   .sportsmed__form-container {
     border-radius: 30px;
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 }
 
@@ -1539,7 +1554,6 @@ body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
 }
 
 .gform_page_footer {
-  margin-top: 0.625rem !important;
   display: flex;
   justify-content: space-around;
 }
@@ -1593,9 +1607,9 @@ body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
 
 .gform_wrapper.gravity-theme .gform_footer,
 .gform_wrapper.gravity-theme .gform_page_footer {
-  --buttonFontSize: 24px;
-  margin-top: 1.5rem !important;
+  /* --buttonFontSize: 24px; */
   justify-content: space-around;
+  gap: 0.75rem;
   padding-bottom: 0px;
 }
 
@@ -1622,12 +1636,18 @@ body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
   border-style: solid !important;
   --tw-border-opacity: 1 !important;
   border-color: rgb(37 99 235 / var(--tw-border-opacity)) !important;
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
   text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .gform_next_button {
     width: 33.333333%;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -1637,12 +1657,18 @@ body.page-id-26145 #asl-storelocator.asl-cont .sl-main-cont .asl-panel-inner {
   border-style: solid !important;
   --tw-border-opacity: 1 !important;
   border-color: rgb(209 213 219 / var(--tw-border-opacity)) !important;
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
   text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .gform_previous_button {
     width: 33.333333%;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -1851,7 +1877,7 @@ a[href^="tel:"]:not(.map-phone):hover {
 }
 
 .gform_wrapper.gravity-theme .gfield {
-  margin-top: 0px !important;
+  margin-top: 0px;
 }
 
 select,
@@ -1917,6 +1943,8 @@ fieldset .wc-stripe-elements-field:focus {
 }
 
 .gform_wrapper.gravity-theme .gfield.gfield--width-third .gfield_label {
+  margin: 0px;
+  padding: 0px;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
@@ -1929,7 +1957,7 @@ fieldset .wc-stripe-elements-field:focus {
 }
 
 .gform_wrapper.gravity-theme .gfield.gfield--width-third {
-  padding-bottom: 0.5rem;
+  padding: 0px;
 }
 
 .gfield_checkbox {
@@ -1987,46 +2015,285 @@ input[type="checkbox"].gfield-choice-input:focus {
 }
 
 .gform_wrapper.gravity-theme .gsection_title {
-  margin-top: 0px !important;
-  margin-bottom: 0px;
-  margin-left: 0.5rem;
-  padding-bottom: 0px;
-  padding-top: 0.5rem;
-  text-align: center;
-  font-size: 9vw;
+  margin: 0px;
+  padding: 0px;
   letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .gform_wrapper.gravity-theme .gsection_title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {
   .gform_wrapper.gravity-theme .gsection_title {
     padding-bottom: 0px;
     padding-top: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gform_wrapper.gravity-theme .gsection_title {
+    margin-left: 0.5rem;
+    padding-top: 0px;
     font-size: 3rem;
     line-height: 1;
   }
 }
 
+.gform_wrapper.gravity-theme .gsection_title {
+  font-size: min(8vw, 36px);
+}
+
 .gform_wrapper.gravity-theme .gsection_description {
-  margin-bottom: 0.25rem;
-  margin-left: 0.5rem;
-  text-align: center;
-  font-size: 1.125rem !important;
+  margin-bottom: 0px !important;
+  margin-top: 0.25rem !important;
+  padding: 0px;
   line-height: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .gform_wrapper.gravity-theme .gsection_description {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 768px) {
   .gform_wrapper.gravity-theme .gsection_description {
-    margin-bottom: 1rem;
+    margin-bottom: 0px !important;
+    margin-top: 0.5rem !important;
   }
 }
 
-.gform_wrapper.gravity-theme .gsection_title.gsection_title_primary {
-  text-align: left;
+@media (min-width: 1024px) {
+  .gform_wrapper.gravity-theme .gsection_description {
+    margin-left: 0.5rem;
+  }
 }
 
-.gform_wrapper.gravity-theme
-  .gsection_description.gsection_description_primary {
-  text-align: left;
+.gform_wrapper.gravity-theme .gsection_description {
+  font-size: min(4.75vw, 18px);
+}
+
+/* Your Selected Sportsmed */
+
+#field_3_62 {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  #field_3_62 {
+    display: block;
+  }
+}
+
+#gform_fields_3 {
+  gap: 0px;
+}
+
+@media (min-width: 768px) {
+  #gform_fields_3 {
+    gap: 0.5rem;
+  }
+}
+
+.gfc__card-container {
+  position: relative;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 45 105 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 768px) {
+  .gfc__card-container {
+    margin-bottom: 1rem;
+    flex-direction: row;
+    gap: 2.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.gfc__card-background-image {
+  position: absolute;
+  inset: 0px;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.gfc__card-text-section {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .gfc__card-text-section {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gfc__card-text-section {
+    padding: 1.5rem;
+  }
+}
+
+.gfc__card-image-section {
+  position: relative;
+  z-index: 10;
+  height: 12rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .gfc__card-image-section {
+    height: auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gfc__card-image-section {
+    margin-right: 1.5rem;
+  }
+}
+
+.gfc__card-main-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .gfc__card-main-image {
+    height: 100%;
+  }
+}
+
+.gfc__card-title {
+  margin-bottom: 0.5rem !important;
+  display: none;
+  padding-bottom: 0px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .gfc__card-title {
+    display: block;
+  }
+}
+
+.gfc__card-main-heading {
+  margin-bottom: 0.5rem !important;
+  margin-top: 0px !important;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .gfc__card-main-heading {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.gfc__card-address {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  line-height: 1.5;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .gfc__card-address {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.gfc__card-contact-info {
+  margin-bottom: 0px !important;
+  margin-top: 1rem;
+  padding-bottom: 0px !important;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  line-height: 2 !important;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .gfc__card-contact-info {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.gfc__card-phone-link {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
+@media (min-width: 768px) {
+  .gfc__card-phone-link {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+}
+
+.click-tap:before {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .click-tap:before {
+    display: inline;
+  }
+}
+
+.click-tap:before {
+  content: "click";
+}
+
+.click-tap:after {
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  .click-tap:after {
+    display: none;
+  }
+}
+
+.click-tap:after {
+  content: "tap";
 }
 
 .tw_card-container,
@@ -2421,6 +2688,7 @@ body.page-id-24695 .tw_card-footer {
 }
 
 .sportsmed__form-header-container {
+  margin-top: 0.75rem !important;
   margin-bottom: 0.75rem !important;
 }
 
@@ -2878,6 +3146,16 @@ body.home #asl-storelocator.asl-cont #asl-panel::-webkit-scrollbar {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:inline {
+    display: inline;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
