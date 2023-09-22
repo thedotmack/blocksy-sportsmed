@@ -190,18 +190,16 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
             <?php include ASL_PLUGIN_PATH . 'public/partials/_agile_modal.php'; ?>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 </div>
 <!-- This plugin is developed by "Agile Store Locator for WordPress" https://agilestorelocator.com -->
 
-
+<!-- Loader <div class="animate-pulse bg-white/90"></div> -->
+<!-- <div id="sportsmed_page_loader" class="fixed z-50 bg-white backdrop-blur-xl backdrop-blur-sm opacity-90 !w-screen h-screen p-40  p-60 !max-w-full"> -->
 <!-- <span class="inline sm:hidden">Change Location</span> <span class="hidden sm:inline">Find a SportsMed</span> -->
-
-<!-- div class="p-5 mt-5 mb-5 flex-col rounded-lg border border-gray-300 bg-white overflow-hidden shadow w-1/3" data-id="{{:id}}">
+<!-- div class="p-5 mt-5 mb-5 flex-col rounded-lg border border-gray-300 !max-w-full bg-white overflow-hidden shadow w-1/3" data-id="{{:id}}">
   
   <div class="flex space-x-3">
     <?php $logomark = wp_get_attachment_image_src(25165, 'full'); ?>
