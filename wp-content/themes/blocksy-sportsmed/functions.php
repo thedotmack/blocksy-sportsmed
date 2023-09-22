@@ -153,7 +153,7 @@ add_action('wp_footer', 'sportsmed_callrail_tracking');
 
   */
 
-add_action('wp_body_open', 'add_page_loader');
+// add_action('wp_body_open', 'add_page_loader');
 function add_page_loader()
 { ?>
   <script>
