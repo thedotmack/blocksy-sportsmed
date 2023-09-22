@@ -195,7 +195,7 @@ $default_addr       = (isset($all_configs['default-addr'])) ? $all_configs['defa
       </div>
     </div>
 
-    <img class="tw_card-image" src="{{:featured_image_url}}">
+    <img class="tw_card-image" src="{{:featured_image_url}}.webp">
 
   </div>
 

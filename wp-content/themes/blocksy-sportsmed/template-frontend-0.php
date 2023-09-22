@@ -270,7 +270,7 @@ $container_class    = (isset($all_configs['full_width']) && $all_configs['full_w
       </div>
     </div>
 
-    <img class="tw_card-image" src="{{:featured_image_url}}">
+    <img class="tw_card-image" src="{{:featured_image_url}}.webp">
 
   </div>
 
