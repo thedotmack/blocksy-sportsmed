@@ -1116,19 +1116,40 @@ body.home #asl-storelocator.asl-cont #asl-panel::-webkit-scrollbar {
 }
 
 .ct-drawer-canvas .ct-widget.widget_block > p {
-  @apply hidden;
+  /* @apply hidden; */
 }
 
 .ct-drawer-canvas .mobile-menu {
-  @apply mt-0 columns-2 gap-[10px] px-2.5 md:columns-3;
+  /* @apply mt-0 columns-2 gap-[10px] px-2.5 md:columns-3; */
 }
 
-.ct-drawer-canvas .mobile-menu .ct-menu-link {
-  @apply mx-1 mb-2.5 rounded-md border border-solid border-slate-200 bg-white py-2.5 shadow shadow-slate-200/30;
+.mobile-menu .ct-sub-menu-parent {
+  /* @apply w-full px-5; */
+}
+
+.mobile-menu li.menu-item > .ct-menu-link {
+  /* @apply w-full rounded-md border border-solid border-slate-200 bg-white px-5 py-2.5 shadow shadow-slate-200/30; */
+}
+
+.mobile-menu .ct-menu-link {
+  @apply block w-full text-left;
+}
+
+.mobile-menu .sub-menu .ct-menu-link.ct-disabled-link {
+  @apply hidden;
+}
+
+.mobile-menu li.menu-item > .ct-menu-link,
+.mobile-menu .ct-sub-menu-parent {
+  @apply my-1 w-[96%] rounded-md border border-solid border-slate-200 bg-white px-5 py-2.5 shadow shadow-slate-200/30;
+}
+
+.mobile-menu .sub-menu {
+  @apply !w-[94%];
 }
 
 .ct-drawer-canvas .mobile-menu .menu-item-22961 .sub-menu {
-  @apply hidden;
+  /* @apply hidden; */
 }
 
 #offcanvas {
