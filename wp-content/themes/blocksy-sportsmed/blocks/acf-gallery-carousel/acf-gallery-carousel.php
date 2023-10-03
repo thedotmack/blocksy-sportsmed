@@ -43,7 +43,7 @@ if (!empty($block['align'])) {
   }
 
 
-?>
+  ?>
   <div class="rounded-[30px] bg-white/5 shadow-2xl ring-1 ring-white/10 overflow-hidden mb-2.5">
     <!-- Slider main container -->
     <div class="swiper swiper-gallery">
@@ -53,7 +53,7 @@ if (!empty($block['align'])) {
         <!-- Slides -->
         <?php foreach ($photos as $photo) : ?>
           <div class="swiper-slide">
-            <img class="object-cover aspect-[4.5/3]" src="<?= $photo['sizes']['large'] ?>">
+            <img class="object-cover aspect-[4.5/3]" src="<?= $photo['sizes']['medium_large'] ?>">
           </div>
         <?php endforeach; ?>
       </div>

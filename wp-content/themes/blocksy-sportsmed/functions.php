@@ -129,7 +129,7 @@ function sportsmed_callrail_tracking()
 { ?>
   <script type="text/javascript" src="//cdn.callrail.com/group/163151525/73e9242b75d65efe233d001d/12/swap.js"></script>
 <?php }
-add_action('wp_footer', 'sportsmed_callrail_tracking');
+// add_action('wp_footer', 'sportsmed_callrail_tracking');
 
 
 // function hide_admin_bar_for_specific_page()
