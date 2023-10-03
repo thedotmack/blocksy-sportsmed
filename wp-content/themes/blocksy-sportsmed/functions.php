@@ -2,6 +2,7 @@
 if (!defined('WP_DEBUG')) {
   die('Direct access forbidden.');
 }
+
 add_action('wp_enqueue_scripts', function () {
 
   wp_enqueue_style('custom-agile-store-locator-tmpl-0', get_stylesheet_directory_uri() . '/tmpl-0-fixed.css');
@@ -99,6 +100,18 @@ function wpseo_locations_count_shortcode($atts)
   return get_wpseo_locations_count($attributes['exclude_category']);
 }
 add_shortcode('total_locations', 'wpseo_locations_count_shortcode');
+
+
+
+// define the action for register yoast_variable replacments
+function register_custom_yoast_variables()
+{
+  wpseo_register_var_replacement('%%total_locations%%', 'get_wpseo_locations_count', 'advanced', '');
+}
+
+// Add action
+add_action('wpseo_register_extra_replacements', 'register_custom_yoast_variables');
+
 
 
 
