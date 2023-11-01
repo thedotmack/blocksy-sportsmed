@@ -44,3 +44,5 @@ wp-content/debug.purge.log
 wp-content/litespeed/
 wp-content/object-cache.php
 wp-content/smush-webp/
+.ftp-deploy-sync-state.json
+package-lock.json

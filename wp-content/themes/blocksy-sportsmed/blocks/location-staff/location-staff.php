@@ -33,15 +33,15 @@ $location_staff = get_field('staff', $post_id) ?: 'Location Staff';
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>">
 
   <div class="flex space-x-[2.5%] flex-wrap justify-center stk-<?php echo esc_attr($class_name); ?>" data-block-id="<?php echo esc_attr($class_name); ?>">
-      <?php foreach ($location_staff as $location_staff_member) : ?>
+    <?php foreach ($location_staff as $location_staff_member) : ?>
 
-        <a class="block relative w-[23%] text-blue-900 text-center mb-5" href="<?php echo get_permalink($location_staff_member->ID); ?>">
-          <img class="rounded-2xl border-2 border-solid border-gray-200 shadow-xl h-96 w-full object-cover" src="<?php echo get_the_post_thumbnail_url($location_staff_member->ID); ?>" alt="<?php echo $location_staff_member->post_title; ?>">
-      
-          <span class="text-xl font-medium mt-2 block"><?php echo $location_staff_member->post_title; ?></span>
-        </a>
+      <div class="block relative w-[23%] text-blue-900 text-center mb-5">
+        <img class="rounded-2xl border-2 border-solid border-gray-200 shadow-xl h-96 w-full object-cover" src="<?php echo get_the_post_thumbnail_url($location_staff_member->ID); ?>" alt="<?php echo $location_staff_member->post_title; ?>">
 
-      <?php endforeach; ?>
+        <span class="text-xl font-medium mt-2 block"><?php echo $location_staff_member->post_title; ?></span>
+      </div>
+
+    <?php endforeach; ?>
   </div>
 
 </div>
