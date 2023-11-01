@@ -166,21 +166,21 @@ function sportsmed_callrail_tracking()
 
   */
 
-// add_action('wp_body_open', 'add_page_loader');
+add_action('wp_body_open', 'add_page_loader');
 function add_page_loader()
 { ?>
   <script>
     jQuery(document).ready(function($) {
-      setTimeout(function() {
-        $("#sportsmed_page_loader").fadeOut(166, function() {
-          $(this).remove();
-        });
-      }, 333);
+      // setTimeout(function() {
+      // }, 0);
+      $("#sportsmed_page_loader").fadeOut(300, function() {
+        $(this).remove();
+      });
     });
   </script>
   <div id="sportsmed_page_loader" class="fixed z-[100] flex bg-white w-[100vw] h-[100vh] p-28 !max-w-full items-center justify-center">
     <div>
-      <svg id="Layer_2" class="sportsmed-dancer -ml-[10%] -mt-[10%] animate-pulse h-60 max-w-full" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 481.63 295.4">
+      <svg id="Layer_2" class="sportsmed-dancer -ml-[10%] animate-bounce h-60 max-w-full" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 481.63 295.4">
         <defs>
           <style>
             .cls-1 {
